@@ -32,6 +32,36 @@
             Escríbenos para consultar la disponibilidad de bicicletas
             y los detalles de tu reserva.
         </p>
+<form action="#" method="post">
+    <fieldset>
+        <legend>Tus datos</legend>
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Nombre completo">
+        </p>
+
+        <p>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required minlength="5" placeholder="Tu correo electrónico">
+        </p>
+
+        <p>
+            <label for="fecha">Fecha de reserva:</label>
+            <input type="date" id="fecha" name="fecha" required>
+        </p>
+        
+        <p>
+            <label for="bicicleta">Tipo de bicicleta:</label>
+            <select id="bicicleta" name="bicicleta" required>
+                <option value="">Selecciona una opción</option>
+                <option value="urbana">Urbana</option>
+                <option value="montaña">Montaña</option>
+                <option value="eléctrica">Eléctrica</option>
+        
+            </select>
+        </p>
+            <button type="submit">Enviar reserva</button>
+    </fieldset>
 
         <p>
             Correo de contacto:
@@ -40,21 +70,35 @@
             </a>
         </p>
 
+        <table border="1">
+            <caption><h2>Horario de atención</h2></caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Día</th>
+                    <th scope="col">Horario</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">Lunes a viernes</th>
+                    <td>7:00 a. m. a 7:00 p. m.</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Sábados</th>
+                    <td>6:00 a. m. a 2:00 p. m.</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Domingos y festivos</th>
+                    <td>6:00 a. m. a 2:00 p. m.</td>
+                </tr>
+            </tbody>
+        </table>    
         <h2>Horario de atención</h2>
 
-        <dl>
-            <dt>Lunes a viernes</dt>
-            <dd>7:00 a. m. a 7:00 p. m.</dd>
-
-            <dt>Sábados</dt>
-            <dd>6:00 a. m. a 2:00 p. m.</dd>
-
-            <dt>Domingos</dt>
-            <dd>6:00 a. m. a 2:00 p. m.</dd>
-
-            <dt>Festivos</dt>
-            <dd>6:00 a. m. a 2:00 p. m.</dd>
-        </dl>
     </main>
 
     <footer>
