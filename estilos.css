@@ -1,0 +1,542 @@
+
+/* 1. Colores y estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F7F5EE;
+    color: #142D24;
+    line-height: 1.6;
+}
+
+/* 2. Imágenes adaptables */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 3. Encabezado y navegación */
+header,
+nav {
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #142D24;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #C58D00;
+}
+
+/* 4. Contenido principal */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* 5. Títulos */
+h1 {
+    font-size: 42px;
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h1,
+h2,
+h3 {
+    color: #142D24;
+}
+
+/* 6. Botones y enlaces destacados */
+.boton {
+    display: inline-block;
+    background-color: #FFBF36;
+    color: #142D24;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background-color: #E6A91F;
+}
+
+/* 7. Tablas de tarifas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #FFFFFF;
+}
+
+caption {
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+th,
+td {
+    border-bottom: 1px solid #DDDFD4;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #E8EBDD;
+}
+
+/* 8. Pie de página */
+footer {
+    background-color: #142D24;
+    color: #FFFFFF;
+    padding: 25px;
+    text-align: center;
+}
+
+footer a {
+    color: #FFBF36;
+}
+
+/* 9. Ajustes para celulares */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 7px;
+    }
+}
+
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #142D24;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Portada */
+.portada {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 40px auto 60px;
+}
+
+.portada-texto {
+    flex: 1;
+}
+
+.portada-texto h1 {
+    font-size: 52px;
+    margin: 15px 0;
+}
+
+.etiqueta {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.portada-imagen {
+    flex: 1;
+}
+
+.portada-imagen img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 120px 0 0 0;
+}
+
+/* Servicios */
+.servicios-lista {
+    display: flex;
+    gap: 30px;
+}
+
+.servicios-lista article {
+    flex: 1;
+    padding: 20px 0;
+    border-top: 1px solid #D9DCCF;
+}
+
+.servicios-lista a {
+    color: #142D24;
+    font-weight: bold;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .portada {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .portada-texto h1 {
+        font-size: 36px;
+    }
+
+    .portada-imagen img {
+        height: 300px;
+        border-radius: 60px 0 0 0;
+    }
+
+    .servicios-lista {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Encabezado */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 5%;
+    border-bottom: 1px solid #E2E0D7;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.encabezado nav {
+    padding: 0;
+}
+
+.encabezado nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+}
+
+.encabezado nav a {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Portada */
+.portada {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 5%;
+}
+
+.portada-texto,
+.portada-imagen {
+    flex: 1;
+}
+
+.portada-texto h1 {
+    max-width: 500px;
+    font-size: 52px;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.portada-texto > p:not(.etiqueta) {
+    max-width: 420px;
+    color: #555D55;
+}
+
+.etiqueta {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.portada-imagen img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 100px 0 0 0;
+}
+
+/* Celulares */
+@media (max-width: 700px) {
+    .encabezado {
+        flex-wrap: wrap;
+    }
+
+    .encabezado nav {
+        order: 3;
+        width: 100%;
+    }
+
+    .encabezado nav ul {
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .portada {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 30px;
+    }
+
+    .portada-texto h1 {
+        font-size: 38px;
+    }
+
+    .portada-imagen img {
+        height: 300px;
+        border-radius: 60px 0 0 0;
+    }
+}
+
+/* Página de reservas */
+.contenido-reservas {
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+/* Introducción */
+.introduccion-reservas {
+    max-width: 650px;
+    margin-bottom: 40px;
+}
+
+.introduccion-reservas h1 {
+    font-size: 46px;
+    margin: 10px 0;
+}
+
+.introduccion-reservas p {
+    color: #555D55;
+}
+
+/* Formulario */
+.seccion-formulario {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border: 1px solid #E2E0D7;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.seccion-formulario h2,
+.seccion-horarios h2,
+.contacto-reservas h2 {
+    font-size: 25px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #D9DCCF;
+    border-radius: 6px;
+    background-color: #F7F5EE;
+    font: inherit;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: 2px solid #C58D00;
+    outline-offset: 2px;
+}
+
+/* Botón del formulario */
+button.boton {
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Horarios */
+.seccion-horarios {
+    margin-bottom: 40px;
+}
+
+.seccion-horarios table {
+    border: 1px solid #E2E0D7;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Contacto */
+.contacto-reservas {
+    background-color: #E8EBDD;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.contacto-reservas a {
+    color: #142D24;
+    font-weight: bold;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 700px) {
+    .contenido-reservas {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    .introduccion-reservas h1 {
+        font-size: 36px;
+    }
+
+    .seccion-formulario {
+        padding: 20px;
+    }
+
+    .seccion-horarios table {
+        font-size: 14px;
+    }
+}
+
+/* Página de tarifas */
+.contenido-tarifas {
+    max-width: 1100px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.introduccion-tarifas {
+    max-width: 650px;
+    margin-bottom: 45px;
+}
+
+.introduccion-tarifas h1 {
+    font-size: 46px;
+    line-height: 1.15;
+    margin: 10px 0;
+}
+
+.introduccion-tarifas p {
+    color: #555D55;
+}
+
+.seccion-tarifas {
+    margin-bottom: 55px;
+}
+
+.seccion-tarifas h2 {
+    margin-bottom: 8px;
+}
+
+.seccion-tarifas > p {
+    color: #555D55;
+}
+
+.seccion-tarifas table {
+    margin: 25px 0;
+    border: 1px solid #E2E0D7;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.nota-tarifas {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.informacion-tarifas {
+    background-color: #E8EBDD;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.informacion-tarifas li {
+    margin-bottom: 8px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 700px) {
+    .introduccion-tarifas h1 {
+        font-size: 36px;
+    }
+
+    .seccion-tarifas table {
+        font-size: 12px;
+    }
+
+    .seccion-tarifas th,
+    .seccion-tarifas td {
+        padding: 7px 5px;
+        overflow-wrap: anywhere;
+    }
+}

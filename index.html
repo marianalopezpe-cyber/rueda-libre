@@ -6,36 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Alquila bicicletas en Medellín con Rueda Libre. Disfruta recorridos guiados y servicios básicos de taller.">
     <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
-        <li><a href="paginas/reservas.html">Reservas</a></li>
-    </ul>
-</nav>
-    <header>
-        <img
-                src="img/logo.png"
-                alt="Logo de Rueda Libre"
-                width="180"
+
+<header class="encabezado">
+    <a class="logo" href="index.html">
+        <img src="img/logo.png" alt="Rueda Libre">
+    </a>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
+            <li><a href="paginas/reservas.html">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <a class="boton" href="paginas/reservas.html">
+        Reservar ahora →
+    </a>
+</header>
+
+<main>
+    <section class="portada">
+        <div class="portada-texto">
+            <p class="etiqueta">ALQUILER DE BICICLETAS EN MEDELLÍN</p>
+
+            <h1>Explora Medellín sobre ruedas</h1>
+
+            <p>
+                Descubre la ciudad de una manera diferente,
+                activa y sostenible.
+            </p>
+
+            <a class="boton" href="paginas/reservas.html">
+                Reservar ahora →
+            </a>
+        </div>
+
+        <div class="portada-imagen">
+            <img
+                src="img/portada.jpeg"
+                alt="Bicicleta preparada para recorrer Medellín"
             >
-        <h1>Rueda Libre</h1>
-        <p>
-            Descubre Medellín sobre ruedas. Conoce nuestros servicios,
-            disfruta la ciudad a tu ritmo y visita
-            <a href="#encuentranos">nuestra ubicación</a>.
-        </p>
+        </div>
+    </section>
 
-        <img
-            src="img/portada.jpeg"
-            alt="Bicicleta preparada para recorrer las calles de Medellín"
-            width="800"
-        >
-    </header>
-
-    <main>
         <section id="quienes-somos">
             <h2>¿Quiénes somos?</h2>
 
@@ -81,7 +98,7 @@
                     sin preocuparte por planear todo el recorrido.
                 </p>
 <p>
-    <a href="paginas/tarifas.html#recorridos-guiados">
+    <a class="boton" href="paginas/tarifas.html#recorridos-guiados">
         Consulta los recorridos y sus precios.
     </a>
 </p>
@@ -124,12 +141,12 @@
                 <li>Confirma tu reserva y sigue las indicaciones del equipo.</li>
                 <li>Recoge tu bicicleta y disfruta tu aventura sobre ruedas.</li>
             </ol>
-            <a href="paginas/tarifas.html">Consultar tarifas</a>
+            <a class="boton" href="paginas/tarifas.html">Consultar tarifas</a>
             
 
             <p>
                 ¿Tienes alguna pregunta?
-                <a href="mailto:hola@ruedalibre.example">
+                <a class="boton" href="mailto:hola@ruedalibre.example">
                     Escríbenos por correo electrónico
                 </a>.
             </p>
@@ -162,8 +179,8 @@
         </section>
     </main>
 
-    <footer>
-        <footer>
+    
+<footer>
     <p>Rueda Libre</p>
 
     <p>
@@ -174,7 +191,7 @@
 
     <p>&copy; 2026 Rueda Libre</p>
 </footer>
-    </footer>
+
 
 </body>
 </html>
