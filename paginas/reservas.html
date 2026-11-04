@@ -10,14 +10,24 @@
 
     <title>Reservas | Rueda Libre</title>
 
-    <link rel="stylesheet" href="../estilos.css">
+
+<!-- Bootstrap -->
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+>
+
+<!-- CSS propio -->
+<link rel="stylesheet" href="../css/styles.css">
+
 </head>
 
 <body>
 
     <!-- Encabezado y navegación -->
     <header class="encabezado">
-
+            <div class="container d-flex justify-content-between align-items-center">
+   
         <a class="logo" href="../index.html">
             <img src="../img/logo.png" alt="Rueda Libre">
         </a>
@@ -33,7 +43,7 @@
         <a class="boton" href="#formulario-reserva">
             Reservar ahora →
         </a>
-
+    </div>
     </header>
 
     <main class="contenido-reservas">
@@ -179,17 +189,30 @@
     </main>
 
     <!-- Pie de página -->
-    <footer>
-        <p>Rueda Libre</p>
+    
+<footer class="site-footer">
+    <div class="footer-marca">
+        <h2>Rueda Libre</h2>
+        <p>Descubre Medellín sobre ruedas.</p>
+    </div>
 
+    <div class="footer-contacto">
+        <h3>Contacto</h3>
         <p>
             <a href="mailto:hola@ruedalibre.example">
                 hola@ruedalibre.example
             </a>
         </p>
+    </div>
 
+    <div class="footer-horario">
+        <h3>Horario de atención</h3>
+        <p>Lunes a viernes: 7:00 a. m. – 7:00 p. m.</p>
+        <p>Sábados, domingos y festivos: 6:00 a. m. – 2:00 p. m.</p>
         <p>&copy; 2026 Rueda Libre</p>
-    </footer>
+    </div>
+</footer>
+
 
 </body>
 </html>
