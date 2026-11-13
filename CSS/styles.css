@@ -564,64 +564,123 @@ main > section {
 
 }
 
-/* 5. CARRUSEL DE PROMOCIONES */
-
-/* Contenedor de las tres promociones que aparecen en la portada. */
-
-.promociones {
-
-    max-width: 1200px;
-
+/* SECCIÓN DE PROMOCIONES */
+/* SECCIÓN DE PROMOCIONES */
+.seccion-promociones {
+    padding: var(--espacio-xl) 0;
+    background-color: var(--color-crema);
 }
 
-/* Todas las imÃƒÂ¡genes del carrusel tienen la misma altura. */
+.contenedor-promociones {
+    width: 90%;
+    max-width: 85rem;
+    margin: 0 auto;
+}
 
-.promociones .carousel-item img {
+/* CONTENEDOR DEL CARRUSEL */
+.carrusel-promociones {
+    display: flex;
+    gap: var(--espacio-lg);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: var(--espacio-sm);
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-verde) var(--color-crema);
+}
 
+/* TARJETAS */
+.tarjeta-promocion {
+    position: relative;
+    flex: 0 0 85%;
+    min-width: 0;
+    background-color: white;
+    border: 1px solid #D5D5CE;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    scroll-snap-align: center;
+}
+
+/* IMÁGENES */
+.tarjeta-promocion img {
+    display: block;
     width: 100%;
-
-    height: 230px;
-
+    height: 20rem;
     object-fit: cover;
-
 }
 
-/* Fondo oscuro translÃƒÂºcido detrÃƒÂ¡s del texto para mejorar su lectura. */
-
-.promociones .carousel-caption {
-
-    right: 8%;
-
-    left: 8%;
-
-    bottom: 12px;
-
-    padding: 12px 16px;
-
-    border-radius: 12px;
-
-    background-color: rgba(20, 45, 36, 0.78);
-
+/* CONTENIDO */
+.contenido-promocion {
+    padding: var(--espacio-lg);
 }
 
-/* TÃƒÂ­tulos y textos de las promociones. */
-
-.promociones .carousel-caption h2,
-
-.promociones .carousel-caption p {
-
-    color: #FFFFFF;
-
+.contenido-promocion h3 {
+    color: var(--color-azul);
+    margin-bottom: var(--espacio-sm);
 }
 
-/* Mantiene visible un foco claro al navegar el carrusel con teclado. */
+.contenido-promocion p {
+    color: var(--color-gris);
+}
 
-.promociones button:focus-visible {
+/* FLECHAS */
+.controles-carrusel {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--espacio-lg) var(--espacio-lg);
+}
 
-    outline: 3px solid #F4A340;
+.controles-carrusel a {
+    display: inline-block;
+    background-color: var(--color-verde);
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 50%;
+    text-decoration: none;
+}
 
-    outline-offset: 3px;
+.controles-carrusel a:hover {
+    background-color: var(--color-azul);
+}
 
+/* INDICADORES */
+.indicadores-carrusel {
+    display: flex;
+    justify-content: center;
+    gap: var(--espacio-md);
+    margin-top: var(--espacio-md);
+}
+
+.indicadores-carrusel a {
+    color: var(--color-gris);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.indicadores-carrusel a:hover {
+    color: var(--color-verde);
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .tarjeta-promocion {
+        flex-basis: 90%;
+    }
+
+    .tarjeta-promocion img {
+        height: 16rem;
+    }
+}
+
+/* MÓVIL */
+@media (max-width: 480px) {
+    .tarjeta-promocion {
+        flex-basis: 100%;
+    }
+
+    .tarjeta-promocion img {
+        height: 13rem;
+    }
 }
 
 /* 5. QUIÃƒâ€°NES SOMOS */
@@ -2240,4 +2299,88 @@ main {
 /* Las imÃ¡genes nunca deben desbordar sus tarjetas. */
 .card img {
     max-width: 100%;
+}
+/* Botón para consultar las políticas */
+.btn-politicas {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: var(--color-verde);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-verde);
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: var(--espacio-md);
+    transition: background-color 0.3s ease;
+}
+
+.btn-politicas:hover {
+    background-color: var(--color-crema);
+    color: var(--color-verde);
+}
+/* Fondo oscuro de la ventana emergente */
+.modal-politicas {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(20, 33, 61, 0.75);
+    z-index: 9999;
+    padding: var(--espacio-lg);
+    overflow-y: auto;
+}
+
+/* Mostrar ventana al hacer clic */
+.modal-politicas:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido de la ventana */
+.contenido-politicas {
+    position: relative;
+    background-color: var(--color-crema);
+    color: var(--color-azul);
+    width: 100%;
+    max-width: 40rem;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: var(--espacio-xl);
+    border: 1px solid #D8D8D0;
+    border-radius: 1rem;
+    margin: auto;
+}
+
+.contenido-politicas h2 {
+    color: var(--color-verde);
+    margin-bottom: var(--espacio-lg);
+}
+
+.contenido-politicas h3 {
+    margin-top: var(--espacio-md);
+    font-size: 1.1rem;
+}
+
+/* Botón de cerrar */
+.cerrar-politicas {
+    position: absolute;
+    top: var(--espacio-sm);
+    right: var(--espacio-md);
+    color: var(--color-azul);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+/* Botón entendido */
+.btn-cerrar-politicas {
+    display: inline-block;
+    background-color: var(--color-naranja);
+    color: var(--color-azul);
+    padding: var(--espacio-sm) var(--espacio-lg);
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: var(--espacio-lg);
 }

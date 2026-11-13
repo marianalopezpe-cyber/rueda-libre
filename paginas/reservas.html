@@ -329,21 +329,11 @@
                     </div>
 <!-- BOTÓN QUE ABRE EL MODAL DE POLÍTICAS -->
 
-                    <button
+                    <a href="#politicas" class="btn-politicas">
+    <i class="bi bi-file-earmark-text"></i>
+    Leer políticas de alquiler
+</a>
 
-                        class="btn btn-outline-success rounded-pill px-4 mb-3"
-
-                        type="button"
-
-                        data-bs-toggle="modal"
-
-                        data-bs-target="#modalPoliticas">
-
-                        <i class="bi bi-file-earmark-text me-1" aria-hidden="true"></i>
-
-                        Leer políticas de alquiler
-
-                    </button>
 <!-- BOTÓN PARA ENVIAR EL FORMULARIO -->
 
                     <div>
@@ -363,103 +353,38 @@
             </form>
 
         </section>
-<!-- MODAL: ventana emergente con las cinco políticas -->
 
-        <div class="modal fade"
 
-             id="modalPoliticas"
 
-             tabindex="-1"
+<!-- Ventana emergente de políticas -->
+<section id="politicas" class="modal-politicas">
+    <div class="contenido-politicas">
 
-             aria-labelledby="tituloModalPoliticas"
+        <a href="#" class="cerrar-politicas" aria-label="Cerrar ventana">
+            &times;
+        </a>
 
-             aria-hidden="true">
+        <h2>Políticas de alquiler</h2>
 
-            <div class="modal-dialog modal-dialog-centered">
+        <p>Antes de realizar tu reserva, ten en cuenta las siguientes condiciones:</p>
 
-                <div class="modal-content">
-<!-- Encabezado del modal -->
+        <h3>1. Requisitos para alquilar</h3>
+        <p>El usuario debe presentar un documento de identidad válido y cumplir con las condiciones de alquiler.</p>
 
-                    <div class="modal-header">
+        <h3>2. Uso de la bicicleta</h3>
+        <p>La bicicleta debe utilizarse de manera responsable y respetando las normas de tránsito.</p>
 
-                        <h2 class="modal-title fs-5" id="tituloModalPoliticas">
+        <h3>3. Devolución</h3>
+        <p>La bicicleta debe entregarse en el horario y lugar acordados.</p>
 
-                            Políticas de alquiler
+        <h3>4. Responsabilidad</h3>
+        <p>El usuario es responsable del cuidado de la bicicleta durante el período de alquiler.</p>
 
-                        </h2>
-<!-- Botón para cerrar el modal -->
+        <a href="#" class="btn-cerrar-politicas">Entendido</a>
 
-                        <button type="button"
+    </div>
+</section>
 
-                                class="btn-close"
-
-                                data-bs-dismiss="modal"
-
-                                aria-label="Cerrar ventana"></button>
-
-                    </div>
-<!-- Contenido del modal -->
-
-                    <div class="modal-body">
-
-                        <p>Antes de disfrutar tu recorrido, ten en cuenta estas condiciones:</p>
-
-                        <ol>
-
-                            <li class="mb-2">
-
-                                Presenta tu documento de identidad original al recoger la bicicleta.
-
-                            </li>
-
-                            <li class="mb-2">
-
-                                Revisa la bicicleta con el asesor antes de salir.
-
-                            </li>
-
-                            <li class="mb-2">
-
-                                Cada 15 minutos de retraso en la devolución tienen un recargo de $5.000.
-
-                            </li>
-
-                            <li class="mb-2">
-
-                                Los daños por mal uso se cobran según el costo de la reparación.
-
-                            </li>
-
-                            <li>
-
-                                Los menores de edad deben estar acompañados por un adulto responsable.
-
-                            </li>
-
-                        </ol>
-
-                    </div>
-<!-- Pie del modal -->
-
-                    <div class="modal-footer">
-
-                        <button type="button"
-
-                                class="btn btn-warning rounded-pill px-4"
-
-                                data-bs-dismiss="modal">
-
-                            Entendido
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
 <!-- HORARIOS DE ATENCIÓN -->
 
         <section class="seccion-horarios">
@@ -581,48 +506,6 @@
         </div>
 
     </footer>
-<!-- Bootstrap Bundle: necesario para navbar, alerta y modal -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<!-- SCRIPT OFICIAL DE VALIDACIÓN DE BOOTSTRAP: mantener dentro de script -->
-
-    <script>
-
-    (() => {
-
-      'use strict'
-
-*// Busca todos los formularios que tengan la clase needs-validation*
-
-      const forms = document.querySelectorAll('.needs-validation')
-
-*// Recorre cada formulario para escuchar el evento de envío*
-
-      Array.from(forms).forEach(*form* => {
-
-*form*.addEventListener('submit', *event* => {
-
-*// Si algún campo no cumple sus reglas, evita el envío*
-
-          if (!*form*.checkValidity()) {
-
-*event*.preventDefault()
-
-*event*.stopPropagation()
-
-          }
-
-*// Activa los estilos visuales de validación de Bootstrap*
-
-*form*.classList.add('was-validated')
-
-        }, false)
-
-      })
-
-    })()
-
-    </script>
 
 </body>
 

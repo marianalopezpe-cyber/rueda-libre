@@ -48,28 +48,10 @@
             </a>
 <!-- Botón hamburguesa: aparece en pantallas menores a 992px -->
 
-            <button class="navbar-toggler"
+            <!-- Menú visible permanentemente: no necesita JavaScript ni botón hamburguesa -->
+            <div class="navbar-collapse show">
 
-                    type="button"
-
-                    data-bs-toggle="collapse"
-
-                    data-bs-target="#menuPrincipal"
-
-                    aria-controls="menuPrincipal"
-
-                    aria-expanded="false"
-
-                    aria-label="Abrir o cerrar menú">
-
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-<!-- Menú: el id debe coincidir con data-bs-target del botón -->
-
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-
-                <ul id="menu" class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                <ul id="menu" class="navbar-nav flex-row flex-wrap ms-auto align-items-center gap-2 gap-lg-3">
 
                     <li class="nav-item">
 
@@ -379,11 +361,6 @@
         </div>
 
     </footer>
-<!-- Bootstrap Bundle: incluye JavaScript necesario para abrir/cerrar el menú -->
-<!-- Debe estar una sola vez y antes de cerrar body -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>
