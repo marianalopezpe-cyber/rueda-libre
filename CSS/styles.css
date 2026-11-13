@@ -1,2186 +1,978 @@
+/* ==================================================
+   RUEDA LIBRE | HOJA DE ESTILOS CONSOLIDADA
+   HTML + CSS. No requiere JavaScript.
+   ================================================== */
 
-
-/* 1. VARIABLES Y CONFIGURACIÃ“N GENERAL */
-
+/* 1. VARIABLES Y CONFIGURACIÓN GENERAL */
 :root {
-
     --color-verde: #1E7A4F;
-
     --color-naranja: #F39A2B;
-
     --color-azul: #14213D;
-
     --color-crema: #FAF6EF;
-
     --color-gris: #5B6470;
-
     --color-blanco: #FFFFFF;
-
     --color-borde: #D8DCCF;
-
     --color-superficie: #E8EBDD;
 
-
-
     --fuente-titulos: 'Montserrat', sans-serif;
-
     --fuente-textos: 'Open Sans', sans-serif;
 
-
-
     --espacio-xs: 0.5rem;
-
     --espacio-sm: 1rem;
-
     --espacio-md: 1.5rem;
-
     --espacio-lg: 2rem;
-
     --espacio-xl: 3rem;
 
-
-
-/* PersonalizaciÃ³n de Bootstrap */
-
+    /* Personalización de Bootstrap */
     --bs-primary: #1E7A4F;
-
     --bs-primary-rgb: 30, 122, 79;
-
     --bs-link-color: #1E7A4F;
-
     --bs-link-hover-color: #14213D;
-
     --bs-body-font-family: var(--fuente-textos);
-
     --bs-body-color: var(--color-azul);
-
     --bs-body-bg: var(--color-crema);
-
     --bs-border-radius: 12px;
-
 }
-
-
 
 *,
-
 *::before,
-
 *::after {
-
     box-sizing: border-box;
-
 }
-
-
 
 html {
-
     scroll-behavior: smooth;
-
 }
-
-
 
 body {
-
     margin: 0;
-
     color: var(--color-azul);
-
     background-color: var(--color-crema);
-
     font-family: var(--fuente-textos);
-
     font-weight: 400;
-
     line-height: 1.6;
-
 }
-
-
 
 img {
-
     display: block;
-
     max-width: 100%;
-
     height: auto;
-
 }
-
-
 
 h1,
-
 h2,
-
 h3,
-
 h4,
-
 h5,
-
 h6 {
-
     color: var(--color-azul);
-
     font-family: var(--fuente-titulos);
-
     font-weight: 700;
-
     line-height: 1.2;
-
 }
 
-
-
 h1 { font-size: clamp(2rem, 4vw, 3.25rem); }
-
 h2 { font-size: clamp(1.55rem, 3vw, 2rem); }
-
 h3 { font-size: 1.25rem; }
-
-
 
 p { margin-top: 0; }
 
-
-
 a {
-
     color: var(--color-verde);
-
     text-underline-offset: 4px;
-
 }
-
-
 
 a:hover { color: var(--color-azul); }
 
-
-
 a:focus-visible,
-
 button:focus-visible,
-
 .btn:focus-visible,
-
 input:focus-visible,
-
 select:focus-visible,
-
 textarea:focus-visible {
-
     outline: 3px solid var(--color-azul);
-
     outline-offset: 3px;
-
 }
-
-
 
 .texto-secundario { color: var(--color-gris); }
 
-
-
 /* 2. CONTENEDORES */
-
 main {
-
     width: calc(100% - 2rem);
-
     max-width: 75rem;
-
     margin: 2rem auto;
-
 }
-
-
 
 main > section { margin-bottom: 2.5rem; }
 
-
+/* 10. ESTRUCTURAS QUE SIGUEN SIENDO PROPIAS DE TARIFAS Y RESERVAS.
+   No eliminar: estas reglas no se migraron en este reto. */
 
 .contenido-tarifas,
-
 .contenido-reservas {
-
     width: calc(100% - 2rem);
-
     max-width: 75rem;
-
     margin: 2rem auto;
-
 }
-
-
 
 .introduccion-tarifas,
-
 .introduccion-reservas,
-
 .encabezado-flota {
-
     max-width: 650px;
-
     margin-bottom: 1.75rem;
-
 }
-
-
 
 .introduccion-tarifas h1,
-
 .introduccion-reservas h1 {
-
     margin: 0.6rem 0;
-
     line-height: 1.15;
-
 }
-
-
 
 .introduccion-tarifas p,
-
 .introduccion-reservas p,
-
 .seccion-tarifas > p,
-
 .encabezado-flota > p:last-child {
-
     color: var(--color-gris);
-
 }
-
-
 
 .seccion-tarifas { margin-bottom: 2.5rem; }
-
 .seccion-tarifas h2 { margin-bottom: 0.5rem; }
 
-
-
-/* 3. ENCABEZADO Y NAVEGACIÃ“N*
-
-*   menu */
-
-.encabezado {
-
-    width: 100%;
-
-    padding: 1.25rem 0;
-
-    background-color: var(--color-crema);
-
-    border-bottom: 1px solid var(--color-borde);
-
-}
-
-
-
-.encabezado-contenido {
-
-    display: flex;
-
-    flex-direction: row;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 1.25rem;
-
-}
-
-
-
-.encabezado .navbar-brand {
-
-    flex-shrink: 0;
-
-    margin: 0;
-
-}
-
-
-
-.encabezado .navbar-brand img {
-
-    display: block;
-
-    width: 165px;
-
-    max-width: 100%;
-
-    height: auto;
-
-}
-
-
-
-.menu-navegacion {
-
-    flex: 1 1 25rem;
-
-    min-width: 0;
-
-}
-
-
-
-#menu {
-
-    display: flex;
-
-    flex-direction: row;
-
-    justify-content: flex-end;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 0.5rem 1.25rem;
-
-    margin: 0;
-
-    padding: 0;
-
-    list-style: none;
-
-}
-
-
-
-#menu li {
-
-    margin: 0;
-
-    padding: 0;
-
-}
-
-
-
-#menu a {
-
-    display: inline-block;
-
-    padding: 0.5rem;
-
-    color: var(--color-azul);
-
-    font-weight: 600;
-
-    text-decoration: none;
-
-    text-underline-offset: 4px;
-
-    transition: color 0.2s ease, background-color 0.2s ease;
-
-}
-
-
-
-#menu a:hover {
-
-    color: var(--color-verde);
-
-    text-decoration: underline;
-
-}
-
-
-
-#menu a.activo,
-
-#menu a.active {
-
-    color: var(--color-verde);
-
-    font-weight: 700;
-
-    text-decoration: underline;
-
-}
-
-
-
-/* Compatibilidad visual temporal con pÃ¡ginas que aÃºn tengan navbar Bootstrap. */
-
+/* 3. ENCABEZADO Y NAVEGACIÓN
+   El menú permanece visible en móvil y escritorio.
+   No utiliza navbar-toggler, collapse ni JavaScript. */
+.encabezado,
 .navbar-rueda {
-
-    padding: 1rem 0;
-
     background-color: var(--color-crema);
-
     border-bottom: 1px solid var(--color-borde);
-
+    padding: 1rem 0;
 }
 
+.encabezado .container,
+.encabezado nav {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
+.encabezado nav { padding: 0.5rem 4%; }
 
+.encabezado .logo img,
 .navbar-rueda .navbar-brand img {
-
     width: 165px;
-
     max-width: 100%;
-
     height: auto;
-
 }
 
+.menu-principal .navbar-nav,
+#menu,
+.encabezado nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-
-.navbar-rueda .nav-link {
-
+.menu-principal .nav-link,
+.navbar-rueda .nav-link,
+.encabezado nav a,
+#menu a {
+    display: inline-block;
+    padding: 0.5rem;
     color: var(--color-azul);
-
     font-weight: 600;
-
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-
-
+.menu-principal .nav-link:hover,
 .navbar-rueda .nav-link:hover,
-
-.navbar-rueda .nav-link.active {
-
+.encabezado nav a:hover,
+#menu a:hover,
+.menu-principal .nav-link[aria-current="page"],
+.navbar-rueda .nav-link.active,
+#menu a.activo,
+#menu a.active {
     color: var(--color-verde);
-
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
-
+.boton-encabezado {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    white-space: nowrap;
+    text-decoration: none;
+}
 
 /* 4. BOTONES */
-
 .btn-primary {
-
     --bs-btn-color: #FFFFFF;
-
     --bs-btn-bg: var(--color-verde);
-
     --bs-btn-border-color: var(--color-verde);
-
     --bs-btn-hover-color: #FFFFFF;
-
     --bs-btn-hover-bg: #17623F;
-
     --bs-btn-hover-border-color: #17623F;
-
     --bs-btn-active-color: #FFFFFF;
-
     --bs-btn-active-bg: #124C31;
-
     --bs-btn-active-border-color: #124C31;
-
 }
-
-
 
 .btn-naranja-pedal {
-
     --bs-btn-color: var(--color-azul);
-
     --bs-btn-bg: var(--color-naranja);
-
     --bs-btn-border-color: var(--color-naranja);
-
     --bs-btn-hover-color: var(--color-azul);
-
     --bs-btn-hover-bg: #E58B25;
-
     --bs-btn-hover-border-color: #E58B25;
-
     --bs-btn-active-color: var(--color-azul);
-
     --bs-btn-active-bg: #D77A18;
-
     --bs-btn-active-border-color: #D77A18;
-
 }
-
-
 
 .btn-outline-success {
-
     --bs-btn-color: var(--color-verde);
-
     --bs-btn-border-color: var(--color-verde);
-
     --bs-btn-hover-color: #FFFFFF;
-
     --bs-btn-hover-bg: var(--color-verde);
-
     --bs-btn-hover-border-color: var(--color-verde);
-
 }
-
-
 
 .boton-accion,
-
 #menu a.boton-accion {
-
     color: var(--color-azul);
-
     background-color: var(--color-naranja);
-
     border: 1px solid var(--color-naranja);
-
     border-radius: 0.5rem;
-
     font-weight: 700;
-
     text-decoration: none;
-
     transition: color 0.2s ease, background-color 0.2s ease;
-
 }
-
-
-
-#menu a.boton-accion:hover,
-
-#menu a.boton-accion:focus-visible,
 
 .boton-accion:hover,
-
-.boton-accion:focus-visible {
-
+.boton-accion:focus-visible,
+#menu a.boton-accion:hover,
+#menu a.boton-accion:focus-visible {
     color: var(--color-crema);
-
     background-color: var(--color-verde);
-
     border-color: var(--color-verde);
-
 }
-
-
 
 .btn-politicas {
-
     display: inline-block;
-
     margin-bottom: var(--espacio-md);
-
     padding: 0.5rem 1rem;
-
     color: var(--color-verde);
-
     background-color: var(--color-blanco);
-
     border: 1px solid var(--color-verde);
-
     border-radius: 2rem;
-
     font-size: 0.9rem;
-
     text-decoration: none;
-
 }
-
-
 
 .btn-politicas:hover {
-
     color: var(--color-verde);
-
     background-color: var(--color-crema);
-
 }
 
-
-
-/* 5. PORTADA */
-
-.portada {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: var(--espacio-xl);
-
-    align-items: center;
-
-}
-
-
-
-.portada-texto {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    justify-content: center;
-
-    min-width: 0;
-
-}
-
-
-
+/* 5. PORTADA: distribución resuelta con container, row y col de Bootstrap. */
 .etiqueta {
-
     margin-bottom: 0.6rem;
-
     font-size: 0.75rem;
-
     font-weight: 700;
-
     letter-spacing: 2px;
-
 }
-
-
 
 .portada-texto h1 {
-
     max-width: 500px;
-
     margin: 0.6rem 0 1rem;
-
     font-size: clamp(2.2rem, 5vw, 3.25rem);
-
     line-height: 1.1;
-
 }
-
-
 
 .portada-texto > p:not(.etiqueta) {
-
     max-width: 420px;
-
     color: var(--color-gris);
-
 }
-
-
 
 .portada-texto .btn { margin-top: 0.5rem; }
-
 .portada-imagen { min-width: 0; }
 
-
-
 .portada-imagen img {
-
     width: 100%;
-
     height: 280px;
-
     object-fit: cover;
-
     border-radius: 3.5rem 0 0;
-
 }
-
-
 
 /* 6. PROMOCIONES: CARRUSEL HORIZONTAL SIN JAVASCRIPT */
-
 .seccion-promociones {
-
     padding: var(--espacio-xl) 0;
-
     background-color: var(--color-crema);
-
 }
-
-
 
 .contenedor-promociones {
-
     width: 90%;
-
     max-width: 85rem;
-
     margin: 0 auto;
-
 }
-
-
 
 .carrusel-promociones {
-
     display: flex;
-
     gap: var(--espacio-lg);
-
     overflow-x: auto;
-
     padding: var(--espacio-sm);
-
     scroll-snap-type: x mandatory;
-
     scroll-behavior: smooth;
-
     scrollbar-width: thin;
-
     scrollbar-color: var(--color-verde) var(--color-crema);
-
 }
-
-
 
 .tarjeta-promocion {
-
     position: relative;
-
     flex: 0 0 85%;
-
     min-width: 0;
-
     overflow: hidden;
-
     background-color: var(--color-blanco);
-
     border: 1px solid var(--color-borde);
-
     border-radius: 1.5rem;
-
     scroll-snap-align: center;
-
 }
-
-
 
 .tarjeta-promocion img {
-
     width: 100%;
-
     height: 20rem;
-
     object-fit: cover;
-
 }
-
-
 
 .contenido-promocion { padding: var(--espacio-lg); }
-
 .contenido-promocion h3 {
-
     margin-bottom: var(--espacio-sm);
-
     color: var(--color-azul);
-
 }
-
 .contenido-promocion p { color: var(--color-gris); }
 
-
-
 .controles-carrusel {
-
     display: flex;
-
     justify-content: space-between;
-
     padding: 0 var(--espacio-lg) var(--espacio-lg);
-
 }
-
-
 
 .controles-carrusel a {
-
     display: inline-block;
-
     padding: 0.6rem 1rem;
-
     color: var(--color-blanco);
-
     background-color: var(--color-verde);
-
     border-radius: 50%;
-
     text-decoration: none;
-
 }
-
-
 
 .controles-carrusel a:hover { background-color: var(--color-azul); }
 
-
-
 .indicadores-carrusel {
-
     display: flex;
-
     justify-content: center;
-
     gap: var(--espacio-md);
-
     margin-top: var(--espacio-md);
-
 }
-
-
 
 .indicadores-carrusel a {
-
     color: var(--color-gris);
-
     font-size: 1.2rem;
-
     text-decoration: none;
-
 }
-
-
 
 .indicadores-carrusel a:hover { color: var(--color-verde); }
 
-
-
-/* 7. QUIENES SOMOS */
-
+/* 7. QUIÉNES SOMOS */
 .quienes-somos {
-
     display: flex;
-
     flex-direction: column;
-
     align-items: stretch;
-
     gap: 1.25rem;
-
     margin: 2.8rem 0;
-
 }
-
-
 
 .quienes-somos > div { min-width: 0; }
-
 .quienes-somos h2 { margin-top: 0; }
 
-
-
 .quienes-somos img {
-
     width: 100%;
-
     max-width: 450px;
-
     border-radius: 10px;
-
 }
-
-
 
 /* 8. FLOTA, RUTAS Y TARJETAS */
-
 .flota,
-
+.seccion-flota,
 .servicios,
-
 .rutas-guiadas {
-
     margin: 2.8rem 0;
-
 }
-
-
-
-.cuadricula-rutas {
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: var(--espacio-lg);
-
-}
-
-
 
 .encabezado-flota h2 { margin: 0.6rem 0; }
 
-
-
 .tarjeta-bicicleta,
-
 .tarjeta-ruta,
-
 .servicios .card {
-
     height: 100%;
-
     min-width: 0;
-
     overflow: hidden;
-
     background-color: var(--color-blanco);
-
     border: 1px solid var(--color-borde);
-
     border-radius: 1rem;
-
 }
-
-
 
 .tarjeta-bicicleta .card-img-top,
-
 .tarjeta-ruta .card-img-top {
-
     display: block;
-
     width: 100%;
-
     height: 12rem;
-
     object-fit: cover;
-
 }
-
-
 
 .tarjeta-bicicleta .card-body,
-
 .tarjeta-ruta .card-body,
-
 .servicios .card-body {
-
     display: flex;
-
     flex-direction: column;
-
     align-items: flex-start;
-
     padding: var(--espacio-md);
-
 }
-
-
 
 .tarjeta-bicicleta .card-title,
-
 .tarjeta-ruta .card-title {
-
     margin-bottom: 0.6rem;
-
     color: var(--color-azul);
-
 }
-
-
 
 .tarjeta-bicicleta .card-text,
-
 .tarjeta-ruta .card-text {
-
     color: var(--color-gris);
-
 }
-
-
 
 .tarjeta-bicicleta .reservar-bicicleta { margin-top: auto; }
 
-
-
 .precio-bicicleta {
-
     margin: 0 0 1.1rem;
-
     color: var(--color-azul);
-
     font-size: 1.25rem;
-
     font-weight: 700;
-
 }
-
-
 
 .precio-bicicleta span {
-
     color: var(--color-gris);
-
     font-size: 0.875rem;
-
     font-weight: 400;
-
 }
-
-
 
 .servicios .row { row-gap: var(--espacio-lg); }
-
 .icono-servicio {
-
     display: inline-block;
-
     margin-bottom: 1.25rem;
-
     color: var(--color-verde);
-
     font-size: 2.5rem;
-
 }
 
-
-
-/* Insignia de novedad para la bicicletas */
-
-
-
+/* Insignia de novedad para la bicicleta eléctrica.
+   Añade class="etiqueta-nuevo" dentro de la tarjeta. */
 .tarjeta-bicicleta { position: relative; }
 
-
-
 .etiqueta-nuevo {
-
     position: absolute;
-
     top: 0.75rem;
-
     left: 0.75rem;
-
     z-index: 2;
-
     padding: 0.35rem 0.75rem;
-
     color: var(--color-azul);
-
     background-color: var(--color-naranja);
-
     border-radius: 2rem;
-
     font-size: 0.75rem;
-
     font-weight: 700;
-
 }
-
-
 
 /* 9. BENEFICIOS Y PROCESO DE ALQUILER */
-
 .beneficios-alquiler { color: var(--color-azul); }
-
 .beneficios-alquiler h2 {
-
     margin-bottom: 0.75rem;
-
     color: var(--color-azul);
-
 }
-
-
 
 .tarjeta-beneficio,
-
 .paso-alquiler {
-
     height: 100%;
-
     background-color: var(--color-superficie);
-
     border: 1px solid var(--color-borde);
-
     border-radius: 1rem;
-
 }
-
-
 
 .icono-beneficio {
-
     display: inline-block;
-
     margin-bottom: 1.25rem;
-
     color: var(--color-verde);
-
     font-size: 2.25rem;
-
     line-height: 1;
-
 }
-
-
 
 .tarjeta-beneficio .card-title {
-
     margin-bottom: 0.75rem;
-
     color: var(--color-azul);
-
     font-size: 1.3rem;
-
 }
-
-
 
 .tarjeta-beneficio .card-text,
-
 .paso-alquiler .card-text,
-
 .contacto-alquiler {
-
     color: var(--color-gris);
-
     line-height: 1.65;
-
 }
-
-
 
 .tarjeta-beneficio .card-text { margin-bottom: 0; }
-
 .paso-alquiler .card-title {
-
     margin-bottom: 0.6rem;
-
     font-size: 1.125rem;
-
 }
-
-
 
 .numero-paso {
-
     display: inline-block;
-
     margin-bottom: 1rem;
-
     color: var(--color-verde);
-
     font-size: 1.75rem;
-
     font-weight: 700;
-
 }
-
-
 
 .contacto-alquiler a {
-
     color: var(--color-verde);
-
     font-weight: 600;
-
 }
-
-
 
 /* 10. TARIFAS Y TABLAS */
-
 .tabla-tarifas {
-
     width: 100%;
-
     max-width: 100%;
-
     border: 1px solid var(--color-borde);
-
     border-collapse: separate;
-
     border-spacing: 0;
-
     background-color: var(--color-blanco);
-
 }
-
-
 
 .tabla-tarifas caption {
-
     padding: 0.5rem 0.25rem;
-
     font-weight: 700;
-
     text-align: left;
-
 }
-
-
 
 .tabla-tarifas th,
-
 .tabla-tarifas td {
-
     padding: 0.75rem 0.6rem;
-
     border: 1px solid var(--color-borde);
-
     text-align: left;
-
     font-size: 0.875rem;
-
     line-height: 1.4;
-
     overflow-wrap: anywhere;
-
 }
-
-
 
 .tabla-tarifas thead th,
-
 .tabla-tarifas tbody th {
-
     color: var(--color-crema);
-
     background-color: var(--color-azul);
-
 }
-
-
 
 .nota-tarifas {
-
     margin-bottom: 1.25rem;
-
     color: var(--color-gris);
-
     font-size: 0.875rem;
-
 }
-
-
 
 .informacion-tarifas,
-
 .contacto-reservas {
-
     margin-bottom: 1.8rem;
-
     padding: 1.25rem;
-
     background-color: var(--color-superficie);
-
     border-radius: 0.75rem;
-
 }
-
-
 
 .informacion-tarifas li { margin-bottom: 0.5rem; }
 
-
-
 /* 11. RESERVAS Y FORMULARIOS */
-
+/* RESERVAS: distribución de formulario y panel de contacto. */
 .layout-reservas {
-
     display: grid;
-
     grid-template-columns: 1fr;
-
     align-items: start;
-
     gap: 1.25rem;
-
 }
-
-
 
 .layout-reservas .seccion-formulario,
-
 .layout-reservas .contacto-reservas {
-
     min-width: 0;
-
     margin-bottom: 0;
-
 }
-
-
 
 .seccion-formulario {
-
     padding: 1.25rem;
-
     background-color: var(--color-blanco);
-
     border: 1px solid var(--color-borde);
-
     border-radius: 0.75rem;
-
 }
-
-
 
 .seccion-formulario h2,
-
 .seccion-horarios h2,
-
 .contacto-reservas h2 {
-
     font-size: 1.4rem;
-
 }
-
-
 
 fieldset {
-
     min-width: 0;
-
     margin: 0;
-
     padding: 0;
-
     border: 0;
-
 }
-
-
 
 legend {
-
     margin-bottom: 1.1rem;
-
     font-weight: 700;
-
 }
-
-
 
 .campo {
-
     min-width: 0;
-
     margin-bottom: 1.1rem;
-
 }
-
-
 
 .campo label,
-
 .seccion-formulario .form-label {
-
     display: block;
-
     margin-bottom: 0.45rem;
-
     font-weight: 700;
-
 }
-
-
 
 .campo input,
-
 .campo select,
-
 .campo textarea,
-
 .seccion-formulario .form-control,
-
 .seccion-formulario .form-select {
-
     display: block;
-
     width: 100%;
-
     max-width: 100%;
-
     padding: 0.75rem;
-
     color: var(--color-azul);
-
     background-color: var(--color-crema);
-
     border: 1px solid var(--color-borde);
-
     border-radius: 0.4rem;
-
     font: inherit;
-
 }
-
-
 
 .campo input:focus-visible,
-
 .campo select:focus-visible,
-
 .campo textarea:focus-visible,
-
 .seccion-formulario .form-control:focus-visible,
-
 .seccion-formulario .form-select:focus-visible {
-
     outline: 3px solid var(--color-verde);
-
     outline-offset: 2px;
-
     border-color: var(--color-verde);
-
     box-shadow: none;
-
 }
 
-
-
+/* RESERVAS: campos en fila en pantallas amplias. */
 .fila-campos {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 0;
-
 }
-
-
 
 .fila-campos .campo {
-
     width: 100%;
-
     min-width: 0;
-
 }
-
-
 
 .seccion-horarios { margin: 1.8rem 0; }
 
-
-
 .seccion-formulario form button[type="submit"] {
-
     padding: var(--espacio-sm) var(--espacio-lg);
-
 }
-
-
 
 .contacto-reservas a {
-
     color: var(--color-verde);
-
     font-weight: 700;
-
     overflow-wrap: anywhere;
-
 }
 
-
-
-/* 12. UBICACION Y CONTACTO */
-
+/* 12. UBICACIÓN Y CONTACTO */
 .ubicacion { color: var(--color-azul); }
 
-
-
 .tarjeta-ubicacion,
-
 .tarjeta-mapa {
-
     height: 100%;
-
     background-color: var(--color-superficie);
-
     border: 1px solid var(--color-borde);
-
     border-radius: 1.1rem;
-
 }
-
-
 
 .tarjeta-ubicacion h3,
-
 .tarjeta-mapa h3,
-
 .tarjeta-ubicacion .card-title {
-
     margin-bottom: 0.6rem;
-
     color: var(--color-azul);
-
     font-size: 1.25rem;
-
 }
-
-
 
 .tarjeta-ubicacion p,
-
 .tarjeta-mapa p,
-
 .tarjeta-ubicacion .card-text {
-
     color: var(--color-gris);
-
     line-height: 1.6;
-
 }
-
-
 
 .icono-ubicacion {
-
     display: inline-block;
-
     margin-bottom: 0.6rem;
-
     color: var(--color-verde);
-
     font-size: 1.6rem;
-
 }
-
-
 
 .tarjeta-mapa iframe {
-
     width: 100%;
-
     height: 100%;
-
     min-height: 250px;
-
     border: 0;
-
     border-radius: 0.75rem;
-
 }
-
-
 
 .tarjeta-mapa .ratio {
-
     overflow: hidden;
-
     border-radius: 0.75rem;
-
 }
-
-
 
 .boton-ubicacion {
-
     color: var(--color-azul);
-
     background-color: var(--color-naranja);
-
     border: 1px solid var(--color-naranja);
-
     font-weight: 600;
-
 }
-
-
 
 .boton-ubicacion:hover {
-
     color: var(--color-azul);
-
     background-color: #E58B25;
-
     border-color: #E58B25;
-
 }
-
-
 
 .enlace-contacto {
-
     color: var(--color-verde);
-
     font-weight: 600;
-
 }
 
-
-
-/* 13. VENTANA DE POLÃTICAS: CSS CON :target */
-
+/* 13. VENTANA DE POLÍTICAS: CSS CON :target */
 .modal-politicas {
-
     position: fixed;
-
     inset: 0;
-
     z-index: 9999;
-
     display: none;
-
     width: 100%;
-
     height: 100%;
-
     padding: var(--espacio-lg);
-
     overflow-y: auto;
-
     background-color: rgba(20, 33, 61, 0.75);
-
 }
-
-
 
 .modal-politicas:target {
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
 }
-
-
 
 .contenido-politicas {
-
     position: relative;
-
     width: 100%;
-
     max-width: 40rem;
-
     max-height: 85vh;
-
     margin: auto;
-
     padding: var(--espacio-xl);
-
     overflow-y: auto;
-
     color: var(--color-azul);
-
     background-color: var(--color-crema);
-
     border: 1px solid var(--color-borde);
-
     border-radius: 1rem;
-
 }
-
-
 
 .contenido-politicas h2 {
-
     margin-bottom: var(--espacio-lg);
-
     color: var(--color-verde);
-
 }
-
-
 
 .contenido-politicas h3 {
-
     margin-top: var(--espacio-md);
-
     font-size: 1.1rem;
-
 }
-
-
 
 .cerrar-politicas {
-
     position: absolute;
-
     top: var(--espacio-sm);
-
     right: var(--espacio-md);
-
     color: var(--color-azul);
-
     font-size: 2rem;
-
     text-decoration: none;
-
 }
-
-
 
 .btn-cerrar-politicas {
-
     display: inline-block;
-
     margin-top: var(--espacio-lg);
-
     padding: var(--espacio-sm) var(--espacio-lg);
-
     color: var(--color-azul);
-
     background-color: var(--color-naranja);
-
     border-radius: 2rem;
-
     font-weight: 700;
-
     text-decoration: none;
-
 }
 
-
-
-/* 14. BOTON FLOTANTE DE WHATSAPP */
-
+/* 14. BOTÓN FLOTANTE DE WHATSAPP
+   Usa class="whatsapp-flotante" en el enlace. */
 .whatsapp-flotante {
-
     position: fixed;
-
     right: 1.25rem;
-
     bottom: 1.25rem;
-
     z-index: 1000;
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
-    gap: 0.5rem;
-
-    padding: 0.75rem 1.1rem;
-
+    width: 3.5rem;
+    height: 3.5rem;
     color: var(--color-blanco);
-
     background-color: var(--color-verde);
-
-    border: 2px solid var(--color-verde);
-
-    border-radius: 2rem;
-
+    border: 2px solid var(--color-crema);
+    border-radius: 50%;
     box-shadow: 0 4px 12px rgba(20, 33, 61, 0.2);
-
-    font-weight: 700;
-
     text-decoration: none;
-
 }
-
-
 
 .whatsapp-flotante:hover {
-
     color: var(--color-blanco);
-
     background-color: var(--color-azul);
-
-    border-color: var(--color-azul);
-
 }
 
-
-
-.whatsapp-flotante:focus-visible {
-
-    outline: 3px solid var(--color-naranja);
-
-    outline-offset: 4px;
-
-}
-
-
-
-/* 15. FOOTER CON FLEXBOX */
-
+/* 15. FOOTER */
 .site-footer {
-
     display: flex;
-
-    flex-direction: row;
-
-    justify-content: space-between;
-
+    flex-direction: column;
     align-items: flex-start;
-
-    flex-wrap: wrap;
-
-    gap: 1.875rem;
-
-    padding: 2.2rem 5%;
-
+    gap: 1.25rem;
+    padding: 2rem 5%;
     color: var(--color-crema);
-
     background-color: var(--color-azul);
-
     text-align: left;
-
 }
-
-
 
 .site-footer > div {
-
-    flex: 1 1 12.5rem;
-
+    width: 100%;
     min-width: 0;
-
 }
-
-
 
 .site-footer h2,
-
 .site-footer h3 {
-
     margin-top: 0;
-
     color: var(--color-crema);
-
 }
-
-
 
 .site-footer p { margin: 0.5rem 0; }
 
-
-
 .site-footer a {
-
     color: var(--color-naranja);
-
     overflow-wrap: anywhere;
-
     text-decoration: none;
-
 }
-
-
 
 .site-footer a:hover { text-decoration: underline; }
 
-
-
 /* 16. RESPONSIVE */
-
 @media (min-width: 576px) {
-
     .tarjeta-promocion { flex-basis: 75%; }
-
 }
 
-
-
 @media (min-width: 768px) {
-
-    .portada {
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 1.9rem;
-
-        margin: 2.5rem 0 3.75rem;
-
-    }
-
-
-
-    .portada-imagen img {
-
+.portada-imagen img {
         height: 350px;
-
         border-radius: 5rem 0 0;
-
     }
-
-
 
     .quienes-somos {
-
         flex-direction: row;
-
         align-items: center;
-
         gap: 1.9rem;
-
     }
-
-
 
     .quienes-somos > div { flex: 1; }
-
     .quienes-somos img { width: 50%; }
 
-
-
     .layout-reservas {
-
         grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-
         gap: 1.5rem;
-
     }
-
-
 
     .seccion-formulario { padding: 1.5rem; }
 
-
-
     .fila-campos {
-
         flex-direction: row;
-
         align-items: flex-start;
-
         gap: 1rem;
-
     }
-
-
 
     .fila-campos .campo { flex: 1; }
 
-
-
     .contenido-tarifas,
-
     .contenido-reservas {
-
         width: 90%;
-
         margin: 2.2rem auto;
-
     }
 
+    .site-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
 
+    .site-footer > div {
+        flex: 1;
+        width: auto;
+    }
 
     .tarjeta-promocion { flex-basis: 60%; }
-
 }
-
-
 
 @media (min-width: 992px) {
+    #menu,
+    .menu-principal .navbar-nav,
+    .encabezado nav ul {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--espacio-md);
+    }
 
     .tarjeta-promocion { flex-basis: 48%; }
-
 }
 
-
-
 @media (min-width: 1200px) {
-
-    .portada {
-
-        gap: 2.5rem;
-
-        margin: 2.5rem 0 3.75rem;
-
-        padding: 1.9rem 0;
-
-    }
-
-
-
-    .portada-imagen img {
-
+.portada-imagen img {
         height: 420px;
-
         border-radius: 6.25rem 0 0;
-
     }
-
-
 
     .seccion-formulario { padding: 1.9rem; }
 
-
-
     .introduccion-tarifas h1,
-
     .introduccion-reservas h1 { font-size: 2.875rem; }
 
-
-
     .site-footer { gap: 1.9rem; }
-
 }
-
-
 
 @media (max-width: 480px) {
-
     .tarjeta-promocion { flex-basis: 100%; }
-
     .tarjeta-promocion img { height: 13rem; }
-
     .contenido-politicas { padding: var(--espacio-lg); }
-
-    .encabezado-contenido { justify-content: center; }
-
-    .menu-navegacion { flex-basis: 100%; }
-
-    #menu { justify-content: center; gap: 0.35rem 0.65rem; }
-
     .whatsapp-flotante {
-
-        right: 0.75rem;
-
-        bottom: 0.75rem;
-
-        padding: 0.65rem 0.9rem;
-
-    }
-
-}
-
-/* MINI RETO 13: GRID Y FLEXBOX */
-
-
-
-.seccion-flota {
-
-    padding: var(--espacio-xl) 5%;
-
-}
-
-
-
-.contenedor-flota {
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-}
-
-
-
-.encabezado-flota {
-
-    margin-bottom: var(--espacio-lg);
-
-}
-
-
-
-.cuadricula-flota {
-
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: var(--espacio-lg);
-
-}
-
-
-
-.tarjeta-bicicleta {
-
-    display: flex;
-
-    flex-direction: column;
-
-    height: 100%;
-
-    padding: var(--espacio-md);
-
-    border: 1px solid #ddd;
-
-    border-radius: 16px;
-
-    background-color: white;
-
-    box-sizing: border-box;
-
-}
-
-
-
-.tarjeta-bicicleta img {
-
-    width: 100%;
-
-    height: 200px;
-
-    object-fit: cover;
-
-    border-radius: 10px;
-
-}
-
-
-
-.contenido-tarjeta {
-
-    display: flex;
-
-    flex-direction: column;
-
-    flex: 1;
-
-    gap: var(--espacio-sm);
-
-}
-
-
-
-.contenido-tarjeta a {
-
-    margin-top: auto;
-
-}
-
-
-
-.contenedor-reservas {
-
-    display: grid;
-
-    grid-template-columns: 2fr 1fr;
-
-    gap: var(--espacio-xl);
-
-}
-
-
-
-.fila-campos {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--espacio-md);
-}
-
-@media (min-width: 768px) {
-    .fila-campos {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-/* MINI RETO 14: DISTRIBUCIÃ“N DE PORTADA, RUTAS Y RESERVAS */
-@media (max-width: 767px) {
-    .portada,
-    .cuadricula-rutas {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 768px) {
-    .portada {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    }
-
-    .cuadricula-rutas {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .layout-reservas {
-        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-        gap: var(--espacio-xl);
+        right: 1rem;
+        bottom: 1rem;
     }
 }
