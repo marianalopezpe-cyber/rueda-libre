@@ -2384,3 +2384,72 @@ main {
     font-weight: bold;
     margin-top: var(--espacio-lg);
 }
+
+/* =====================================================
+   MINIRETO 12: ETIQUETA NUEVO Y ACCESO A WHATSAPP
+   ===================================================== */
+
+/* La tarjeta será el punto de referencia de la etiqueta. */
+.tarjeta-electrica {
+    position: relative;
+}
+
+/* Etiqueta anclada a la esquina superior derecha. */
+.etiqueta-nuevo {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background-color: var(--color-naranja);
+    color: var(--color-azul);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Acceso fijo a WhatsApp, visible durante el scroll. */
+.whatsapp-flotante {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1050;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border: 2px solid var(--color-verde);
+    border-radius: 30px;
+    background-color: var(--color-verde);
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estados de interacción y accesibilidad. */
+.whatsapp-flotante:hover {
+    background-color: var(--color-azul);
+    border-color: var(--color-azul);
+    color: #FFFFFF;
+}
+
+.whatsapp-flotante:focus-visible {
+    outline: 3px solid var(--color-naranja);
+    outline-offset: 4px;
+}
+
+/* Espacio inferior para que el botón no tape el final del contenido. */
+body {
+    padding-bottom: 5rem;
+}
+
+/* Ajuste para pantallas pequeñas. */
+@media (max-width: 576px) {
+    .whatsapp-flotante {
+        right: 12px;
+        bottom: 12px;
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+}
