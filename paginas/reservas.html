@@ -8,109 +8,61 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-
-          content="Reserva tu bicicleta con Rueda Libre en Medellín.">
+    <meta name="description" content="Reserva tu bicicleta con Rueda Libre en Medellín.">
 
     <title>Reservas | Rueda Libre</title>
-<!-- Bootstrap Icons -->
+    <!-- Bootstrap Icons -->
 
-    <link rel="stylesheet"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap CSS -->
 
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<!-- Bootstrap CSS -->
-
-    <link rel="stylesheet"
-
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-<!-- Estilos propios de Rueda Libre -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <!-- Estilos propios de Rueda Libre -->
 
     <link rel="stylesheet" href="../CSS/styles.css">
 
 </head>
 
 <body>
-<!-- NAVBAR: misma navegación de las otras páginas -->
+    <!-- NAVBAR: misma navegación de las otras páginas -->
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="encabezado">
+        <div class="container encabezado-contenido">
 
-    <nav class="navbar navbar-expand-lg navbar-rueda" data-bs-theme="light">
-
-        <div class="container">
-
+            <!-- Logo -->
             <a class="navbar-brand" href="../index.html">
-
-                <img src="../img/logo.png"
-
-                     alt="Logo de Rueda Libre"
-
-                     width="165">
-
+                <img src="../img/logo.png" alt="Logo de Rueda Libre" width="165">
             </a>
-<!-- Botón del menú para pantallas pequeñas -->
 
-            <button class="navbar-toggler"
-
-                    type="button"
-
-                    data-bs-toggle="collapse"
-
-                    data-bs-target="#menuPrincipal"
-
-                    aria-controls="menuPrincipal"
-
-                    aria-expanded="false"
-
-                    aria-label="Abrir o cerrar menú">
-
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-<!-- Enlaces del menú -->
-
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-
-                <ul id="menu" class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-
-                    <li class="nav-item">
-
+            <!-- Menú de navegación -->
+            <nav class="menu-navegacion" aria-label="Navegación principal">
+                <ul id="menu">
+                    <li>
                         <a class="nav-link" href="../index.html">Inicio</a>
-
                     </li>
-
-                    <li class="nav-item">
-
+                    <li>
                         <a class="nav-link" href="tarifas.html">Tarifas y rutas</a>
-
                     </li>
-
-                    <li class="nav-item">
-
-                        <a class="nav-link active activo"
-
-                           href="reservas.html"
-
-                           aria-current="page">Reservas</a>
-
+                    <li>
+                        <a class="nav-link activo" href="reservas.html" aria-current="page">
+                            Reservas
+                        </a>
                     </li>
-
-                    <li class="nav-item">
-
-                        <a class="btn btn-naranja-pedal btn-lg boton-accion"
-
-                           href="#formulario-reserva">Reservar ahora →</a>
-
+                    <li>
+                        <a class="btn btn-naranja-pedal btn-lg boton-accion" href="reservas.html">
+                            Reservar ahora →
+                        </a>
                     </li>
-
                 </ul>
-
-            </div>
+            </nav>
 
         </div>
+    </header>
 
-    </nav>
-<!-- CONTENIDO PRINCIPAL -->
+    <!-- CONTENIDO PRINCIPAL -->
 
     <main class="contenido-reservas">
-<!-- Introducción -->
+        <!-- Introducción -->
 
         <section class="introduccion-reservas">
 
@@ -129,14 +81,14 @@
             </p>
 
         </section>
-<!-- FORMULARIO -->
+        <!-- FORMULARIO -->
 
         <section id="formulario-reserva" class="seccion-formulario">
 
             <h2>Cuéntanos sobre tu recorrido</h2>
 
             <p>Completa los siguientes campos.</p>
-<!-- ALERTA INFORMATIVA: el usuario puede cerrarla -->
+            <!-- ALERTA INFORMATIVA: el usuario puede cerrarla -->
 
             <div class="alert alert-info alert-dismissible fade show" role="alert">
 
@@ -146,16 +98,10 @@
 
                 original al recoger la bicicleta.
 
-                <button type="button"
-
-                        class="btn-close"
-
-                        data-bs-dismiss="alert"
-
-                        aria-label="Cerrar aviso"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar aviso"></button>
 
             </div>
-<!--*
+            <!--*
 
 *                needs-validation activa los estilos de validación Bootstrap.*
 
@@ -170,30 +116,14 @@
                 <fieldset>
 
                     <legend>Tus datos</legend>
-<!-- NOMBRE -->
+                    <!-- NOMBRE -->
 
                     <div class="campo mb-3">
 
                         <label class="form-label" for="nombre">Nombre completo</label>
 
-                        <input
-
-                            class="form-control"
-
-                            type="text"
-
-                            id="nombre"
-
-                            name="nombre"
-
-                            required
-
-                            minlength="3"
-
-                            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]{3,}"
-
-                            placeholder="Tu nombre completo"
-
+                        <input class="form-control" type="text" id="nombre" name="nombre" required minlength="3"
+                            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]{3,}" placeholder="Tu nombre completo"
                             aria-describedby="error-nombre">
 
                         <div class="invalid-feedback" id="error-nombre">
@@ -205,27 +135,14 @@
                         </div>
 
                     </div>
-<!-- CORREO ELECTRÓNICO -->
+                    <!-- CORREO ELECTRÓNICO -->
 
                     <div class="campo mb-3">
 
                         <label class="form-label" for="correo">Correo electrónico</label>
 
-                        <input
-
-                            class="form-control"
-
-                            type="email"
-
-                            id="correo"
-
-                            name="correo"
-
-                            required
-
-                            placeholder="ejemplo@correo.com"
-
-                            aria-describedby="error-correo">
+                        <input class="form-control" type="email" id="correo" name="correo" required
+                            placeholder="ejemplo@correo.com" aria-describedby="error-correo">
 
                         <div class="invalid-feedback" id="error-correo">
 
@@ -234,24 +151,13 @@
                         </div>
 
                     </div>
-<!-- FECHA DE RESERVA -->
+                    <!-- FECHA DE RESERVA -->
 
                     <div class="campo mb-3">
 
                         <label class="form-label" for="fecha">Fecha de reserva</label>
 
-                        <input
-
-                            class="form-control"
-
-                            type="date"
-
-                            id="fecha"
-
-                            name="fecha"
-
-                            required
-
+                        <input class="form-control" type="date" id="fecha" name="fecha" required
                             aria-describedby="error-fecha">
 
                         <div class="invalid-feedback" id="error-fecha">
@@ -261,22 +167,13 @@
                         </div>
 
                     </div>
-<!-- TIPO DE BICICLETA -->
+                    <!-- TIPO DE BICICLETA -->
 
                     <div class="campo mb-3">
 
                         <label class="form-label" for="bicicleta">Tipo de bicicleta</label>
 
-                        <select
-
-                            class="form-select"
-
-                            id="bicicleta"
-
-                            name="bicicleta"
-
-                            required
-
+                        <select class="form-select" id="bicicleta" name="bicicleta" required
                             aria-describedby="error-bicicleta">
 
                             <option value="" selected disabled>Selecciona una opción</option>
@@ -296,23 +193,12 @@
                         </div>
 
                     </div>
-<!-- ACEPTACIÓN DE POLÍTICAS -->
+                    <!-- ACEPTACIÓN DE POLÍTICAS -->
 
                     <div class="form-check mb-3">
 
-                        <input
-
-                            class="form-check-input"
-
-                            type="checkbox"
-
-                            id="aceptar-politicas"
-
-                            name="aceptar-politicas"
-
-                            required
-
-                            aria-describedby="error-politicas">
+                        <input class="form-check-input" type="checkbox" id="aceptar-politicas" name="aceptar-politicas"
+                            required aria-describedby="error-politicas">
 
                         <label class="form-check-label" for="aceptar-politicas">
 
@@ -327,20 +213,18 @@
                         </div>
 
                     </div>
-<!-- BOTÓN QUE ABRE EL MODAL DE POLÍTICAS -->
+                    <!-- BOTÓN QUE ABRE EL MODAL DE POLÍTICAS -->
 
                     <a href="#politicas" class="btn-politicas">
-    <i class="bi bi-file-earmark-text"></i>
-    Leer políticas de alquiler
-</a>
+                        <i class="bi bi-file-earmark-text"></i>
+                        Leer políticas de alquiler
+                    </a>
 
-<!-- BOTÓN PARA ENVIAR EL FORMULARIO -->
+                    <!-- BOTÓN PARA ENVIAR EL FORMULARIO -->
 
                     <div>
 
-                        <button class="btn btn-naranja-pedal btn-lg rounded-pill px-4 boton-accion"
-
-                                type="submit">
+                        <button class="btn btn-naranja-pedal btn-lg rounded-pill px-4 boton-accion" type="submit">
 
                             Enviar reserva →
 
@@ -356,36 +240,37 @@
 
 
 
-<!-- Ventana emergente de políticas -->
-<section id="politicas" class="modal-politicas">
-    <div class="contenido-politicas">
+        <!-- Ventana emergente de políticas -->
+        <section id="politicas" class="modal-politicas">
+            <div class="contenido-politicas">
 
-        <a href="#" class="cerrar-politicas" aria-label="Cerrar ventana">
-            &times;
-        </a>
+                <a href="#" class="cerrar-politicas" aria-label="Cerrar ventana">
+                    &times;
+                </a>
 
-        <h2>Políticas de alquiler</h2>
+                <h2>Políticas de alquiler</h2>
 
-        <p>Antes de realizar tu reserva, ten en cuenta las siguientes condiciones:</p>
+                <p>Antes de realizar tu reserva, ten en cuenta las siguientes condiciones:</p>
 
-        <h3>1. Requisitos para alquilar</h3>
-        <p>El usuario debe presentar un documento de identidad válido y cumplir con las condiciones de alquiler.</p>
+                <h3>1. Requisitos para alquilar</h3>
+                <p>El usuario debe presentar un documento de identidad válido y cumplir con las condiciones de alquiler.
+                </p>
 
-        <h3>2. Uso de la bicicleta</h3>
-        <p>La bicicleta debe utilizarse de manera responsable y respetando las normas de tránsito.</p>
+                <h3>2. Uso de la bicicleta</h3>
+                <p>La bicicleta debe utilizarse de manera responsable y respetando las normas de tránsito.</p>
 
-        <h3>3. Devolución</h3>
-        <p>La bicicleta debe entregarse en el horario y lugar acordados.</p>
+                <h3>3. Devolución</h3>
+                <p>La bicicleta debe entregarse en el horario y lugar acordados.</p>
 
-        <h3>4. Responsabilidad</h3>
-        <p>El usuario es responsable del cuidado de la bicicleta durante el período de alquiler.</p>
+                <h3>4. Responsabilidad</h3>
+                <p>El usuario es responsable del cuidado de la bicicleta durante el período de alquiler.</p>
 
-        <a href="#" class="btn-cerrar-politicas">Entendido</a>
+                <a href="#" class="btn-cerrar-politicas">Entendido</a>
 
-    </div>
-</section>
+            </div>
+        </section>
 
-<!-- HORARIOS DE ATENCIÓN -->
+        <!-- HORARIOS DE ATENCIÓN -->
 
         <section class="seccion-horarios">
 
@@ -446,19 +331,14 @@
         </section>
 
 
-<!-- Acceso fijo al canal de atención por WhatsApp -->
-<a
-    class="whatsapp-flotante"
-    href="https://wa.me/573000000000"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Contactar a Rueda Libre por WhatsApp (se abre en una pestaña nueva)"
->
-    <i class="bi bi-whatsapp" aria-hidden="true"></i>
-    <span>WhatsApp</span>
-</a>
+        <!-- Acceso fijo al canal de atención por WhatsApp -->
+        <a class="whatsapp-flotante" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer"
+            aria-label="Contactar a Rueda Libre por WhatsApp (se abre en una pestaña nueva)">
+            <i class="bi bi-whatsapp" aria-hidden="true"></i>
+            <span>WhatsApp</span>
+        </a>
 
-<!-- CONTACTO -->
+        <!-- CONTACTO -->
 
         <section class="contacto-reservas">
 
@@ -479,7 +359,7 @@
         </section>
 
     </main>
-<!-- PIE DE PÁGINA -->
+    <!-- PIE DE PÁGINA -->
 
     <footer class="site-footer">
 

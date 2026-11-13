@@ -38,67 +38,54 @@
 <body>
 <!-- NAVBAR RUEDA LIBRE -->
 
-    <nav class="navbar navbar-expand-lg navbar-rueda" data-bs-theme="light">
 
-        <div class="container">
-<!-- LOGO -->
+<!-- ENCABEZADO RUEDA LIBRE CON FLEXBOX -->
+<header class="encabezado">
+    <div class="container encabezado-contenido">
 
-            <a class="navbar-brand" href="index.html">
+        <!-- LOGO -->
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo de Rueda Libre" width="165">
+        </a>
 
-                <img src="img/logo.png" alt="Logo de Rueda Libre" width="165">
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="menu-navegacion" aria-label="Navegación principal">
+            <ul id="menu">
 
-            </a>
-<!-- MENÚ DE NAVEGACIÓN -->
+                <li>
+                    <a class="nav-link activo" href="index.html" aria-current="page">
+                        Inicio
+                    </a>
+                </li>
 
-            <div class="navbar-collapse menu-navegacion" id="menuPrincipal">
+                <li>
+                    <a class="nav-link" href="paginas/tarifas.html">
+                        Tarifas y rutas
+                    </a>
+                </li>
 
-                <ul id="menu" class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                <li>
+                    <a class="nav-link" href="paginas/reservas.html">
+                        Reservas
+                    </a>
+                </li>
 
-                    <li class="nav-item">
+                <li>
+                    <a class="btn btn-naranja-pedal btn-lg boton-accion"
+                       href="paginas/reservas.html">
+                        <i class="bi bi-bicycle me-1" aria-hidden="true"></i>
+                        Reservar ahora →
+                    </a>
+                </li>
 
-                        <a class="nav-link active activo" href="index.html" aria-current="page">
+            </ul>
+        </nav>
 
-                            Inicio
-
-                        </a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="paginas/tarifas.html">
-
-                            Tarifas y rutas
-
-                        </a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="paginas/reservas.html">
-
-                            Reservas
-
-                        </a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a class="btn btn-naranja-pedal btn-lg boton-accion" href="paginas/reservas.html"><i class="bi bi-bicycle me-1" aria-hidden="true"></i>Reservar ahora →</a>
-
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </nav>
+    </div>
+</header>
 
     <main>
+
 <!-- PORTADA: GRID DE DOS COLUMNAS -->
 
         <section class="portada">
@@ -128,6 +115,7 @@
             </div>
 
         </section>
+
 <!-- PROMOCIONES: presentación estática, sin JavaScript -->
 
        <section class="seccion-promociones">
@@ -209,209 +197,93 @@
             <img src="img/bicicleta.jpeg" alt="Bicicleta disponible para alquilar en Rueda Libre" width="600">
 
         </section>
+
 <!-- NUESTRA FLOTA -->
-
-        <section class="flota" id="nuestra-flota">
-
-            <div class="encabezado-flota">
-
-                <p class="etiqueta">ENCUENTRA TU BICICLETA</p>
-
-                <h2>Nuestra flota</h2>
-
-                <p>
-
-                    Elige la bicicleta ideal para descubrir Medellín a tu ritmo.
-
-                </p>
-
-            </div>
-
-            <div class="container">
-
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-<!-- BICICLETA 1 -->
-
-                    <div class="col">
-
-                        <article class="card tarjeta-bicicleta h-100">
-
-                            <img class="card-img-top" src="img/clasica.png" alt="Bicicleta urbana clásica">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h3 class="card-title">Urbana Clásica</h3>
-
-                                <p class="card-text">Cómoda y liviana para las ciclorrutas.</p>
-
-                                <p class="precio-bicicleta">
-
-                                    $10.000 <span>/ hora</span>
-
-                                </p>
-
-                                <a class="btn btn-naranja-pedal reservar-bicicleta mt-auto align-self-start"
-
-                                    href="paginas/reservas.html">Reservar</a>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-<!-- BICICLETA 2 -->
-
-                    <div class="col">
-
-                        <article class="card tarjeta-bicicleta h-100">
-
-                            <img class="card-img-top" src="img/plegable.png" alt="Bicicleta urbana plegable">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h3 class="card-title">Urbana Plegable</h3>
-
-                                <p class="card-text">Se dobla en segundos; ideal para combinar con el metro.</p>
-
-                                <p class="precio-bicicleta">
-
-                                    $12.000 <span>/ hora</span>
-
-                                </p>
-
-                                <a class="btn btn-naranja-pedal reservar-bicicleta mt-auto align-self-start"
-
-                                    href="paginas/reservas.html">Reservar</a>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-<!-- BICICLETA 3 -->
-
-                    <div class="col">
-
-                        <article class="card tarjeta-bicicleta h-100">
-
-                            <img class="card-img-top" src="img/trail.png" alt="Bicicleta de montaña Trail">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h3 class="card-title">Montaña Trail</h3>
-
-                                <p class="card-text">Suspensión delantera y 21 cambios para las subidas.</p>
-
-                                <p class="precio-bicicleta">
-
-                                    $15.000 <span>/ hora</span>
-
-                                </p>
-
-                                <a class="btn btn-naranja-pedal reservar-bicicleta mt-auto align-self-start"
-
-                                    href="paginas/reservas.html">Reservar</a>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-<!-- BICICLETA 4 -->
-
-                    <div class="col">
-
-                        <article class="card tarjeta-bicicleta h-100">
-
-                            <img class="card-img-top" src="img/gravel.png" alt="Bicicleta Gravel Aventura">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h3 class="card-title">Gravel Aventura</h3>
-
-                                <p class="card-text">Para rutas mixtas de asfalto y destapado.</p>
-
-                                <p class="precio-bicicleta">
-
-                                    $18.000 <span>/ hora</span>
-
-                                </p>
-
-                                <a class="btn btn-naranja-pedal reservar-bicicleta mt-auto align-self-start"
-
-                                    href="paginas/reservas.html">Reservar</a>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-<!-- BICICLETA 5 -->
-
-                    <div class="col">
-
-                        <article class="card tarjeta-bicicleta h-100 tarjeta-electrica">
-
-                            <span class="etiqueta-nuevo">Nuevo</span>
-
-                            <img class="card-img-top" src="img/electrica.png" alt="Bicicleta eléctrica urbana">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h3 class="card-title">Eléctrica Urbana</h3>
-
-                                <p class="card-text">Asistencia eléctrica con 45 km de autonomía.</p>
-
-                                <p class="precio-bicicleta">
-
-                                    $25.000 <span>/ hora</span>
-
-                                </p>
-
-                                <a class="btn btn-naranja-pedal reservar-bicicleta mt-auto align-self-start"
-
-                                    href="paginas/reservas.html">Reservar</a>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-<!-- BICICLETA 6 -->
-
-                    <div class="col">
-
-                        <article class="card tarjeta-bicicleta h-100">
-
-                            <img class="card-img-top" src="img/infantil.png" alt="Bicicleta infantil">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h3 class="card-title">Infantil</h3>
-
-                                <p class="card-text">Para niños de 6 a 10 años.</p>
-
-                                <p class="precio-bicicleta">
-
-                                    $8.000 <span>/ hora</span>
-
-                                </p>
-
-                                <a class="btn btn-naranja-pedal reservar-bicicleta mt-auto align-self-start"
-
-                                    href="paginas/reservas.html">Reservar</a>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-
+<section class="seccion-flota" id="flota">
+    <div class="contenedor-flota">
+        <header class="encabezado-flota">
+            <span class="etiqueta-seccion">NUESTRA FLOTA</span>
+            <h2>Encuentra tu bicicleta ideal</h2>
+            <p>Elige tu compañera de ruta y descubre Medellín sobre ruedas.</p>
+        </header>
+
+        <div class="cuadricula-flota">
+
+            <article class="tarjeta-bicicleta">
+                <img src="img/urbana-clasica.jpg" alt="Bicicleta Urbana Clásica">
+                <div class="contenido-tarjeta">
+                    <h3>Urbana Clásica</h3>
+                    <p>Cómoda y liviana para las ciclorrutas.</p>
+                    <strong>$10.000 / hora</strong>
+                    <a href="paginas/reservas.html" class="boton-reservar">Reservar</a>
                 </div>
+            </article>
 
-            </div>
+            <article class="tarjeta-bicicleta">
+                <img src="img/urbana-plegable.jpg" alt="Bicicleta Urbana Plegable">
+                <div class="contenido-tarjeta">
+                    <h3>Urbana Plegable</h3>
+                    <p>Se dobla en segundos; ideal para combinar con el metro.</p>
+                    <strong>$12.000 / hora</strong>
+                    <a href="paginas/reservas.html" class="boton-reservar">Reservar</a>
+                </div>
+            </article>
 
-        </section>
+            <article class="tarjeta-bicicleta">
+                <img src="img/montana-trail.jpg" alt="Bicicleta Montaña Trail">
+                <div class="contenido-tarjeta">
+                    <h3>Montaña Trail</h3>
+                    <p>Suspensión delantera y 21 cambios para las subidas.</p>
+                    <strong>$15.000 / hora</strong>
+                    <a href="paginas/reservas.html" class="boton-reservar">Reservar</a>
+                </div>
+            </article>
+
+            <article class="tarjeta-bicicleta">
+                <img src="img/gravel-aventura.jpg" alt="Bicicleta Gravel Aventura">
+                <div class="contenido-tarjeta">
+                    <h3>Gravel Aventura</h3>
+                    <p>Para rutas mixtas de asfalto y destapado.</p>
+                    <strong>$18.000 / hora</strong>
+                    <a href="paginas/reservas.html" class="boton-reservar">Reservar</a>
+                </div>
+            </article>
+
+            <article class="tarjeta-bicicleta tarjeta-electrica">
+                <span class="etiqueta-nuevo">Nuevo</span>
+                <img src="img/electrica-urbana.jpg" alt="Bicicleta Eléctrica Urbana">
+                <div class="contenido-tarjeta">
+                    <h3>Eléctrica Urbana</h3>
+                    <p>Asistencia eléctrica con 45 km de autonomía.</p>
+                    <strong>$25.000 / hora</strong>
+                    <a href="paginas/reservas.html" class="boton-reservar">Reservar</a>
+                </div>
+            </article>
+
+            <article class="tarjeta-bicicleta">
+                <img src="img/infantil.jpg" alt="Bicicleta Infantil">
+                <div class="contenido-tarjeta">
+                    <h3>Infantil</h3>
+                    <p>Para niños de 6 a 10 años.</p>
+                    <strong>$8.000 / hora</strong>
+                    <a href="paginas/reservas.html" class="boton-reservar">Reservar</a>
+                </div>
+            </article>
+
+            <article class="tarjeta-bicicleta">
+                <img src="img/tandem.jpg" alt="Bicicleta Tándem para dos personas">
+                <div class="contenido-tarjeta">
+                    <h3>Tándem</h3>
+                    <p>Para dos personas; perfecta para pasear en pareja.</p>
+                    <strong>$20.000 / hora</strong>
+                    <a href="paginas/reservas.html" class="boton-reservar">Reservar</a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
 <!-- NUESTROS SERVICIOS -->
 
         <section id="nuestros-servicios" class="servicios py-2">
