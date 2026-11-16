@@ -169,3 +169,28 @@ En el encabezado y el pie de página utilicé Flexbox porque necesitaba organiza
 
 Aprendí a combinar Grid y Flexbox para construir diferentes distribuciones dentro de una misma página. También reforcé el uso de etiquetas semánticas, contenedores compartidos y enlaces internos para organizar la navegación.
 
+-------
+
+## MINI RETO 6 
+
+### Problemas identificados en la versión de escritorio
+
+- La distribución de tres tarjetas en una fila no era adecuada para pantallas pequeñas.
+- Los cuatro pasos necesitaban una distribución más flexible.
+- El encabezado requería una organización diferente en celulares.
+- Los textos y espacios necesitaban ajustes para evitar que el contenido se comprimiera.
+- La información de las tarjetas necesitaba reorganizarse para facilitar su lectura.
+
+### Cambios realizados
+
+- Adapté el encabezado para que sus elementos se apilen en celular y se organicen horizontalmente desde `md`.
+- Oculté los enlaces de navegación en celulares y mantuve visible el botón «Inscríbete».
+- Organicé las tarjetas de rutas con una columna por defecto, dos columnas desde `sm` y tres desde `lg`.
+- Organicé los cuatro pasos con una columna por defecto, dos desde `sm` y cuatro desde `lg`.
+- Ajusté tamaños de títulos, rellenos y espacios entre elementos mediante prefijos responsive.
+- Organicé la franja de inscripción y el pie de página para adaptarse a diferentes anchos.
+
+### nota
+
+Aprendí a trabajar con el enfoque mobile-first de Tailwind CSS, estableciendo primero los estilos para celulares y utilizando los prefijos `sm:`, `md:` y `lg:` para modificar la distribución en pantallas más grandes.
+
