@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kit de componentes de diseño de Rueda Libre.">
+
+    <title>Kit de componentes | Rueda Libre</title>
+
+    <!-- CSS generado por Tailwind CLI -->
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class="min-h-screen bg-[#FAF6EF] text-[#14213D] antialiased">
+
+    <main class="mx-auto w-full max-w-5xl space-y-12 px-6 py-12">
+
+        <!-- ENCABEZADO -->
+        <header class="space-y-3">
+            <p class="text-sm font-bold uppercase tracking-widest text-[#1E7A4F]">
+                Sistema de diseño
+            </p>
+
+            <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
+                Rueda Libre
+            </h1>
+
+            <p class="max-w-2xl text-lg leading-relaxed text-[#5B6470]">
+                Librería de componentes visuales para mantener
+                una experiencia consistente en nuestra plataforma.
+            </p>
+        </header>
+
+
+        <!-- 1. BOTONES -->
+        <section class="space-y-5">
+
+            <div>
+                <h2 class="text-2xl font-bold">01. Botones</h2>
+                <p class="mt-1 text-sm text-[#5B6470]">
+                    Tres variantes para diferentes niveles de acción.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-md">
+
+                <!-- Principal -->
+                <button type="button"
+                    class="rounded-xl bg-[#1E7A4F] px-6 py-3 font-bold text-white shadow-md transition-colors hover:bg-[#155D3B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E7A4F] focus-visible:ring-offset-4">
+                    Principal
+                </button>
+
+                <!-- Secundario -->
+                <button type="button"
+                    class="rounded-xl bg-[#F39A2B] px-6 py-3 font-bold text-[#14213D] shadow-md transition-colors hover:bg-[#E58B25] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F39A2B] focus-visible:ring-offset-4">
+                    Secundario
+                </button>
+
+                <!-- Contorno -->
+                <button type="button"
+                    class="rounded-xl border-2 border-[#1E7A4F] bg-transparent px-6 py-3 font-bold text-[#1E7A4F] transition-colors hover:bg-[#1E7A4F] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E7A4F] focus-visible:ring-offset-4">
+                    Contorno
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- 2. CARD -->
+        <section class="space-y-5">
+
+            <div>
+                <h2 class="text-2xl font-bold">02. Tarjeta de ruta</h2>
+                <p class="mt-1 text-sm text-[#5B6470]">
+                    Componente de contenido con imagen, información y acción.
+                </p>
+            </div>
+
+            <article class="max-w-md overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition-shadow duration-300 hover:shadow-xl">
+
+                <img
+                    src="../img/ruta-centro.jpg"
+                    alt="Recorrido nocturno en bicicleta por el centro de Medellín"
+                    class="h-56 w-full object-cover"
+                >
+
+                <div class="space-y-5 p-6">
+
+                    <span class="inline-flex rounded-full bg-green-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-green-800">
+                        Nivel fácil
+                    </span>
+
+                    <h3 class="text-2xl font-bold">
+                        Luces del Centro
+                    </h3>
+
+                    <dl class="grid grid-cols-2 gap-4">
+
+                        <div>
+                            <dt class="text-sm text-[#5B6470]">
+                                Distancia
+                            </dt>
+                            <dd class="text-lg font-bold">10 km</dd>
+                        </div>
+
+                        <div>
+                            <dt class="text-sm text-[#5B6470]">
+                                Duración
+                            </dt>
+                            <dd class="text-lg font-bold">2 horas</dd>
+                        </div>
+
+                    </dl>
+
+                    <div class="flex items-center justify-between border-t border-gray-200 pt-5">
+
+                        <div>
+                            <p class="text-sm text-[#5B6470]">
+                                Precio por persona
+                            </p>
+                            <p class="text-2xl font-bold text-[#1E7A4F]">
+                                $55.000
+                            </p>
+                        </div>
+
+                        <button type="button"
+                            class="rounded-xl bg-[#1E7A4F] px-5 py-3 text-sm font-bold text-white shadow-md transition-colors hover:bg-[#155D3B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E7A4F] focus-visible:ring-offset-4">
+                            Reservar
+                        </button>
+
+                    </div>
+
+                </div>
+            </article>
+        </section>
+
+
+        <!-- 3. ALERTAS -->
+        <section class="space-y-5">
+
+            <div>
+                <h2 class="text-2xl font-bold">03. Alertas</h2>
+                <p class="mt-1 text-sm text-[#5B6470]">
+                    Mensajes para comunicar información y estados del sistema.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+
+                <!-- Información -->
+                <div role="note"
+                    class="rounded-xl border border-blue-200 border-l-4 border-l-blue-600 bg-blue-50 p-5">
+
+                    <h3 class="font-bold text-blue-900">
+                        Información
+                    </h3>
+
+                    <p class="mt-1 text-sm leading-relaxed text-blue-800">
+                        Recuerda llegar 15 minutos antes del inicio
+                        de tu recorrido nocturno.
+                    </p>
+
+                </div>
+
+
+                <!-- Éxito -->
+                <div role="status"
+                    class="rounded-xl border border-green-200 border-l-4 border-l-green-600 bg-green-50 p-5">
+
+                    <h3 class="font-bold text-green-900">
+                        ¡Reserva confirmada!
+                    </h3>
+
+                    <p class="mt-1 text-sm leading-relaxed text-green-800">
+                        Tu recorrido ha sido registrado correctamente.
+                        ¡Prepárate para disfrutar Medellín!
+                    </p>
+
+                </div>
+
+
+                <!-- Advertencia -->
+                <div role="note"
+                    class="rounded-xl border border-amber-200 border-l-4 border-l-amber-500 bg-amber-50 p-5">
+
+                    <h3 class="font-bold text-amber-900">
+                        Advertencia
+                    </h3>
+
+                    <p class="mt-1 text-sm leading-relaxed text-amber-800">
+                        La ruta requiere casco, luces LED y chaleco
+                        reflectivo durante todo el recorrido.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 4. FORMULARIOS -->
+        <section class="space-y-5">
+
+            <div>
+                <h2 class="text-2xl font-bold">04. Campos de formulario</h2>
+                <p class="mt-1 text-sm text-[#5B6470]">
+                    Campos con etiquetas, instrucciones y estados de foco.
+                </p>
+            </div>
+
+            <form class="max-w-xl space-y-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-md">
+
+                <!-- Correo -->
+                <div class="space-y-2">
+
+                    <label for="correo"
+                        class="block text-sm font-bold text-[#14213D]">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                        aria-describedby="ayuda-correo"
+                        class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-[#14213D] placeholder:text-gray-400 focus:border-[#1E7A4F] focus:outline-none focus:ring-2 focus:ring-[#1E7A4F] focus:ring-offset-2"
+                    >
+
+                    <p id="ayuda-correo" class="text-sm text-[#5B6470]">
+                        Utilizaremos este correo para enviarte la confirmación de tu reserva.
+                    </p>
+
+                </div>
+
+
+                <!-- Celular -->
+                <div class="space-y-2">
+
+                    <label for="celular"
+                        class="block text-sm font-bold text-[#14213D]">
+                        Número de celular
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="celular"
+                        name="celular"
+                        placeholder="300 123 4567"
+                        aria-describedby="ayuda-celular"
+                        class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-[#14213D] placeholder:text-gray-400 focus:border-[#1E7A4F] focus:outline-none focus:ring-2 focus:ring-[#1E7A4F] focus:ring-offset-2"
+                    >
+
+                    <p id="ayuda-celular" class="text-sm text-[#5B6470]">
+                        Escribe un número de contacto de 10 dígitos.
+                    </p>
+
+                </div>
+
+                <button type="button"
+                    class="rounded-xl bg-[#1E7A4F] px-6 py-3 font-bold text-white shadow-md transition-colors hover:bg-[#155D3B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E7A4F] focus-visible:ring-offset-4">
+                    Guardar datos
+                </button>
+
+            </form>
+        </section>
+
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="border-t border-gray-200 pt-6 text-center">
+            <p class="text-sm text-[#5B6470]">
+                Rueda Libre · Sistema de componentes · 2026
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

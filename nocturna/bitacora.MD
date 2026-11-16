@@ -81,3 +81,65 @@ Aprendí a construir tarjetas utilizando utilidades de bordes, sombras, espaciad
 
 También comprendí la importancia de mantener una estructura consistente entre componentes y utilizar diferencias visuales y textuales para identificar los niveles de dificultad.
 
+------
+
+## MINI RETO 4 
+- Creé `nocturna/componentes.html`.
+- Incorporé las tres variantes de botones: principal, secundario y contorno.
+- Reutilicé una tarjeta de ruta del Mini Reto 3.
+- Construí tres alertas: información, éxito y advertencia.
+- Incorporé dos campos de formulario: correo electrónico y número de celular.
+- Asocié cada campo con su etiqueta mediante los atributos `for` e `id`.
+- Agregué textos de ayuda mediante `aria-describedby`.
+- Incorporé estados de foco visibles mediante utilidades de Tailwind.
+- Utilicé `role="status"` en la alerta de éxito para facilitar su identificación por tecnologías de asistencia.
+
+### Reglas del kit de diseño
+
+Para mantener la consistencia visual de los componentes establecí las siguientes reglas:
+
+**Paleta de colores**
+- Verde Ruta: `#1E7A4F`.
+- Naranja Pedal: `#F39A2B`.
+- Azul Noche: `#14213D`.
+- Crema: `#FAF6EF`.
+- Gris Asfalto: `#5B6470`.
+
+**Bordes y formas**
+- Botones e inputs: `rounded-xl`.
+- Cards: `rounded-2xl`.
+- Alertas: `rounded-xl`.
+- Bordes definidos mediante utilidades `border`.
+
+**Espaciado**
+- Utilicé una escala consistente de espaciado mediante clases como `p-4`, `p-5`, `p-6`, `gap-4` y `space-y-5`.
+
+**Sombras e interacción**
+- Sombras iniciales con `shadow-md`.
+- Efectos de interacción con `hover:shadow-xl`.
+- Estados de foco visibles con `focus-visible:ring-2` y `focus:ring-2`.
+
+### Comparación de enfoques
+
+En Bootstrap se utilizan clases de componentes prediseñados para construir elementos de interfaz. En Tailwind CSS se combinan clases de utilidad para definir directamente los estilos de cada componente.
+
+La configuración mediante CLI permite generar un archivo CSS de salida a partir de las clases identificadas en los archivos del proyecto, sin depender del Play CDN.
+
+### Verificación de generación de clases
+
+Al revisar `src/output.css`, comprobé la generación de las clases utilizadas en los archivos HTML analizados.
+
+También busqué una clase que no estaba utilizando para comprobar que no se generara innecesariamente.
+
+**Clase utilizada:** [completar].
+
+**Clase no utilizada:** [completar].
+
+**Resultado:** [registrar lo observado].
+
+### nota
+
+Aprendí a organizar diferentes componentes en una sola página y a establecer reglas visuales compartidas para mantener la consistencia del diseño.
+
+También reforcé conceptos de accesibilidad mediante etiquetas asociadas, textos de ayuda, roles y estados de foco visibles.
+
