@@ -1,8 +1,4 @@
-## MINI RETO — Prototipo de campaña con Tailwind CSS
-
-**Objetivo:** crear una sección principal para la campaña «Rueda Nocturna» utilizando Tailwind CSS Play CDN y únicamente clases de utilidad.
-
-### Actividades realizadas
+## MINI RETO 1
 
 - Creé la carpeta `nocturna/` y el archivo `prototipo.html`.
 - Incorporé el Play CDN de Tailwind CSS en el documento.
@@ -30,3 +26,41 @@ En este ejercicio utilicé Tailwind CSS para construir el enlace «Inscríbete»
 ### Diferencia clave entre Bootstrap y Tailwind
 
 Bootstrap es un framework orientado a componentes prediseñados, mientras que Tailwind utiliza un enfoque *utility
+-------
+
+## MINI RETO 2
+
+- Instalé las dependencias `tailwindcss` y `@tailwindcss/cli` mediante npm.
+- Creé la carpeta `src/` y el archivo `input.css`.
+- Incorporé `@import "tailwindcss";` como punto de entrada de los estilos.
+- Creé el archivo `.gitignore` para excluir la carpeta `node_modules/`.
+- Ejecuté Tailwind CLI con la opción `--watch` para generar y actualizar `src/output.css`.
+- Creé `index.html` y enlacé el CSS generado.
+- Trasladé la sección principal de la campaña Rueda Nocturna al nuevo archivo.
+- Construí tres variantes de botones: principal, secundario y de contorno.
+- Incorporé estados de interacción `hover` y `focus-visible`.
+
+### Generación de clases CSS
+
+Al revisar `output.css`, comprobé que Tailwind genera los estilos correspondientes a las clases utilizadas en los archivos que analiza.
+
+La clase que utilicé para comprobar la generación fue: **[escribir clase utilizada]**.
+
+La clase que no utilicé y busqué fue: **[escribir clase no utilizada]**.
+
+**Resultado de la comprobación:** [describir qué encontré].
+
+Esto ocurre porque Tailwind analiza los archivos del proyecto e identifica las clases utilizadas para generar únicamente los estilos necesarios.
+
+### Diferencias entre Play CDN y Tailwind CLI
+
+En el ejercicio anterior utilicé Play CDN para incorporar Tailwind directamente desde un script en HTML.
+
+En este ejercicio configuré Tailwind mediante npm y su CLI. Esto permite procesar los estilos y generar un archivo CSS que puede utilizarse en el proyecto sin depender del Play CDN.
+
+### nota
+
+Aprendí a configurar Tailwind CSS mediante npm y su CLI, a generar un archivo CSS de salida y a utilizar clases de utilidad para construir componentes con diferentes estados visuales.
+
+También comprendí la importancia de mantener un indicador de foco visible para facilitar la navegación mediante el teclado.
+
