@@ -143,3 +143,29 @@ Aprendí a organizar diferentes componentes en una sola página y a establecer r
 
 También reforcé conceptos de accesibilidad mediante etiquetas asociadas, textos de ayuda, roles y estados de foco visibles.
 
+------
+
+## MINI RETO 5
+
+- Organicé la landing con etiquetas semánticas como `header`, `main`, `section` y `footer`.
+- Construí un encabezado con el nombre de la marca, enlaces de navegación y botón de inscripción.
+- Conservé la sección principal de la campaña Rueda Nocturna.
+- Organicé las tres tarjetas de rutas en una cuadrícula de tres columnas.
+- Incorporé la sección «¿Cómo funciona?» con cuatro pasos.
+- Construí una franja de inscripción para invitar a los visitantes a explorar las rutas.
+- Organicé el pie de página en tres bloques de contenido.
+- Utilicé enlaces internos mediante identificadores `id` para conectar las secciones.
+- Reutilicé las clases de los botones y las tarjetas del kit de componentes.
+
+### Decisiones de layout
+
+Para distribuir las tarjetas de las rutas utilicé CSS Grid mediante Tailwind, con `grid-cols-3` y `gap-6`. Esta distribución permite presentar las tres rutas en columnas iguales y mantener una separación uniforme.
+
+Para los cuatro pasos de «¿Cómo funciona?» también utilicé Grid, mediante `grid-cols-4` y `gap-6`, porque los elementos tienen una estructura similar y deben distribuirse de manera uniforme.
+
+En el encabezado y el pie de página utilicé Flexbox porque necesitaba organizar los elementos horizontalmente y controlar su alineación mediante `justify-between` e `items-center`.
+
+### nota
+
+Aprendí a combinar Grid y Flexbox para construir diferentes distribuciones dentro de una misma página. También reforcé el uso de etiquetas semánticas, contenedores compartidos y enlaces internos para organizar la navegación.
+
