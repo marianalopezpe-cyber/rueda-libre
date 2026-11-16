@@ -64,3 +64,20 @@ Aprendí a configurar Tailwind CSS mediante npm y su CLI, a generar un archivo C
 
 También comprendí la importancia de mantener un indicador de foco visible para facilitar la navegación mediante el teclado.
 
+## MINI RETO 3 
+
+- Creé la sección «Rutas» dentro de `nocturna/index.html`.
+- Construí tres tarjetas para presentar las rutas nocturnas de Rueda Libre.
+- Incorporé imágenes con ancho completo y altura uniforme.
+- Agregué etiquetas para identificar los niveles fácil, medio y difícil.
+- Organicé la información de distancia, duración y punto de encuentro mediante elementos de lista descriptiva.
+- Destaqué el precio de cada recorrido.
+- Reutilicé el estilo del botón principal del Mini Reto 2.
+- Apliqué efectos `hover` para modificar la sombra y el borde de las tarjetas sin desplazar su contenido.
+
+### nota
+
+Aprendí a construir tarjetas utilizando utilidades de bordes, sombras, espaciado, tamaños, tipografía y colores de Tailwind CSS.
+
+También comprendí la importancia de mantener una estructura consistente entre componentes y utilizar diferencias visuales y textuales para identificar los niveles de dificultad.
+
