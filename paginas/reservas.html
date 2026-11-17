@@ -45,7 +45,11 @@
                         </a>
                     </li>
 
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="../nocturna/index.html">
+                            Rueda Nocturna
+                        </a>
+                    </li>
 
                     <li class="nav-item mt-2 mt-lg-0">
                         <a class="btn btn-warning btn-lg" href="reservas.html">
@@ -245,72 +249,64 @@
         </div>
 
         <!-- Ventana emergente de políticas -->
-       
-<!-- MODAL: POLÍTICAS DE ALQUILER -->
-<div class="modal fade"
-     id="modalPoliticas"
-     tabindex="-1"
-     aria-labelledby="tituloModalPoliticas"
-     aria-hidden="true">
 
-    <div class="modal-dialog modal-dialog-centered">
+        <!-- MODAL: POLÍTICAS DE ALQUILER -->
+        <div class="modal fade" id="modalPoliticas" tabindex="-1" aria-labelledby="tituloModalPoliticas"
+            aria-hidden="true">
 
-        <div class="modal-content">
+            <div class="modal-dialog modal-dialog-centered">
 
-            <div class="modal-header">
-                <h2 class="modal-title fs-5" id="tituloModalPoliticas">
-                    Políticas de alquiler
-                </h2>
+                <div class="modal-content">
 
-                <button type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Cerrar ventana">
-                </button>
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="tituloModalPoliticas">
+                            Políticas de alquiler
+                        </h2>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar ventana">
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <p>
+                            Antes de realizar tu reserva, ten en cuenta estas condiciones:
+                        </p>
+
+                        <ol>
+                            <li class="mb-2">
+                                Presenta tu documento de identidad original al recoger la bicicleta.
+                            </li>
+
+                            <li class="mb-2">
+                                Revisa la bicicleta con el asesor antes de salir.
+                            </li>
+
+                            <li class="mb-2">
+                                Cada 15 minutos de retraso en la devolución tienen un recargo de $5.000.
+                            </li>
+
+                            <li class="mb-2">
+                                Los daños por mal uso se cobran según el costo de la reparación.
+                            </li>
+
+                            <li>
+                                Los menores de edad deben estar acompañados por un adulto responsable.
+                            </li>
+                        </ol>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+                            Entendido
+                        </button>
+                    </div>
+
+                </div>
+
             </div>
-
-            <div class="modal-body">
-
-                <p>
-                    Antes de realizar tu reserva, ten en cuenta estas condiciones:
-                </p>
-
-                <ol>
-                    <li class="mb-2">
-                        Presenta tu documento de identidad original al recoger la bicicleta.
-                    </li>
-
-                    <li class="mb-2">
-                        Revisa la bicicleta con el asesor antes de salir.
-                    </li>
-
-                    <li class="mb-2">
-                        Cada 15 minutos de retraso en la devolución tienen un recargo de $5.000.
-                    </li>
-
-                    <li class="mb-2">
-                        Los daños por mal uso se cobran según el costo de la reparación.
-                    </li>
-
-                    <li>
-                        Los menores de edad deben estar acompañados por un adulto responsable.
-                    </li>
-                </ol>
-
-            </div>
-
-            <div class="modal-footer">
-                <button type="button"
-                        class="btn btn-success"
-                        data-bs-dismiss="modal">
-                    Entendido
-                </button>
-            </div>
-
         </div>
-
-    </div>
-</div>
 
         <!-- HORARIOS DE ATENCIÓN -->
         <section class="seccion-horarios">
@@ -365,7 +361,7 @@
             </div>
         </section>
 
-       
+
         <!-- CONTACTO -->
 
     </main>
@@ -395,36 +391,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Validación visual de formularios: ejemplo oficial de Bootstrap -->
-<script>
-(() => {
-  'use strict'
+    <script>
+        (() => {
+            'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
 
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
-</script>
-<a class="whatsapp-flotante"
-   href="https://wa.me/573000000000"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Contactar a Rueda Libre por WhatsApp">
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+    <a class="whatsapp-flotante" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer"
+        aria-label="Contactar a Rueda Libre por WhatsApp">
 
-    <i class="bi bi-whatsapp" aria-hidden="true"></i>
-    <span>WhatsApp</span>
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+        <span>WhatsApp</span>
 
-</a>
+    </a>
 </body>
 
 </html>

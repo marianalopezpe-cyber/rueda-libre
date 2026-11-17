@@ -10,6 +10,18 @@
     --color-borde: #D8DCCF;
     --color-superficie: #E8EBDD;
 
+    --bs-primary: #1E7A4F;
+    --bs-secondary: #5B6470;
+    --bs-success: #1E7A4F;
+    --bs-warning: #FFD166;
+    --bs-dark: #14213D;
+    --bs-light: #FAF6EF;
+
+    --bs-body-font-family: "Open Sans", sans-serif;
+    --bs-heading-font-family: "Montserrat", sans-serif;
+
+    
+
     --fuente-titulos: 'Montserrat', sans-serif;
     --fuente-textos: 'Open Sans', sans-serif;
 

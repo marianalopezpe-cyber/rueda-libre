@@ -1,6 +1,6 @@
 
 /* Fuentes de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap");
 
 /* Tailwind CSS */
 @import "tailwindcss";
@@ -20,21 +20,18 @@
     --font-open-sans: "Open Sans", sans-serif;
 }
 
-/* Componentes reutilizables de Rueda Libre */
+/* Componentes reutilizables */
 @layer components {
-    /* Botón principal: verde en modo claro y amarillo en modo oscuro */
     .btn-primary {
         @apply inline-flex items-center justify-center rounded-xl bg-verde-ruta text-sm font-bold text-white shadow-md transition-colors hover:bg-azul-noche focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-ruta focus-visible:ring-offset-4 focus-visible:ring-offset-white;
     }
 
-    /* Variante del botón principal para modo oscuro */
     @variant dark {
         .btn-primary {
             @apply bg-amarillo-farol text-azul-noche hover:bg-crema focus-visible:ring-amarillo-farol focus-visible:ring-offset-azul-noche;
         }
     }
 
-    /* Botón amarillo de llamada a la acción */
     .btn-highlight {
         @apply inline-flex items-center justify-center rounded-xl bg-amarillo-farol font-bold text-azul-noche shadow-md transition-colors hover:bg-crema focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amarillo-farol focus-visible:ring-offset-4 focus-visible:ring-offset-azul-noche;
     }
