@@ -243,3 +243,34 @@ Aprendí a personalizar el tema de Tailwind CSS mediante `@theme`, generar utili
 Este reto me permitió comprender la importancia de escribir código más limpio y reutilizable. Aprendí que @apply puede ayudar a reducir la repetición de clases en elementos frecuentes, como los botones, sin necesidad de convertir toda la interfaz en componentes personalizados.
 
 También reforcé la importancia de medir el rendimiento de los recursos antes de recomendar una tecnología para un proyecto.
+
+-----
+# MINI RETO 9
+
+Se agregó una nueva sección de inscripción a la landing, organizada en cuatro grupos mediante las etiquetas `<fieldset>` y `<legend>`:
+
+- **Datos personales:** nombre completo, correo electrónico y celular.
+- **Detalles de la ruta:** ruta seleccionada, día de salida y número de acompañantes.
+- **Experiencia y equipo:** nivel de experiencia y disponibilidad de bicicleta propia.
+- **Confirmación:** aceptación de las condiciones de participación.
+
+Se utilizaron diferentes controles HTML según el tipo de información: `input`, `select`, `radio` y `checkbox`. Cada campo quedó asociado con su respectiva etiqueta mediante `label`, `for` e `id`.
+
+### Validaciones implementadas
+Se utilizaron atributos de validación nativa:
+
+- `required`: todos los campos son obligatorios.
+- `minlength="3"`: el nombre debe tener mínimo tres caracteres.
+- `pattern="3[0-9]{9}"`: el celular debe tener diez dígitos y comenzar por 3.
+- `maxlength="10"`: limita la longitud del celular.
+- `type="email"`: comprueba el formato del correo electrónico.
+
+También se agregó JavaScript con `checkValidity()` y `preventDefault()` para validar el formulario y mostrar un mensaje de confirmación visual.
+
+El formulario permite validar los datos directamente en el navegador y mostrar una confirmación visual. Por ahora, no está conectado a un servidor ni almacena o transmite las inscripciones.
+
+### nota
+Durante este reto reforcé el uso de formularios semánticos en HTML, la asociación entre etiquetas y controles, y las validaciones nativas. También comprendí cómo complementar HTML con JavaScript para controlar la respuesta visual del formulario y mejorar la experiencia del usuario.
+
+-------
+
