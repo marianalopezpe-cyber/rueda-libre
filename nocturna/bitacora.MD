@@ -194,3 +194,52 @@ Aprendí a combinar Grid y Flexbox para construir diferentes distribuciones dent
 
 Aprendí a trabajar con el enfoque mobile-first de Tailwind CSS, estableciendo primero los estilos para celulares y utilizando los prefijos `sm:`, `md:` y `lg:` para modificar la distribución en pantallas más grandes.
 
+--------
+
+## MINI RETO 7
+
+- Definí los seis colores de marca mediante variables `--color-*` dentro de `@theme`.
+- Incorporé las familias tipográficas Montserrat y Open Sans desde Google Fonts.
+- Reemplacé los colores genéricos de Tailwind por las utilidades personalizadas de la marca.
+- Apliqué las fuentes de marca a títulos y textos.
+- Incorporé variantes `dark:` para adaptar fondos, textos, tarjetas, bordes y campos de formulario.
+- Utilicé la preferencia de color del sistema para activar el modo oscuro.
+- Revisé las combinaciones de colores mediante criterios de contraste WCAG.
+
+### Paleta de marca
+
+| Color | Código |
+
+| Verde Ruta | #1E7A4F |
+| Naranja Pedal | #F39A2B |
+| Azul Noche | #14213D |
+| Crema | #FAF6EF |
+| Gris Asfalto | #5B6470 |
+| Amarillo Farol | #FFD166 |
+
+### Decisiones de accesibilidad
+
+Identifiqué que Verde Ruta y Gris Asfalto sobre Azul Noche no alcanzan el contraste mínimo de 4.5:1 para texto normal.
+
+Por esta razón, utilicé Crema y Amarillo Farol como colores de texto sobre fondos oscuros y mantuve el Verde Ruta para elementos donde ofrece suficiente contraste.
+
+### nota
+
+Aprendí a personalizar el tema de Tailwind CSS mediante `@theme`, generar utilidades propias y utilizar Google Fonts. También comprendí cómo implementar el modo oscuro con `dark:` y la importancia de comprobar el contraste para garantizar la legibilidad.
+
+------
+
+## Mini Reto 8
+
+- Revisé las clases utilizadas en los elementos de la landing para identificar estilos repetidos.
+- Identifiqué los botones como elementos prioritarios para la reutilización de estilos.
+- Creé las clases personalizadas `btn-primary` y `btn-highlight` mediante `@apply`, dentro de `@layer components`.
+- Actualicé el HTML para utilizar estas clases en los botones, manteniendo las clases de espaciado particulares.
+- Conservé la estructura de las tarjetas y las secciones para evitar crear componentes personalizados innecesarios.
+- Organicé las clases siguiendo categorías: layout, espaciado, tipografía, color y estados.
+- Conservé la paleta de marca, las fuentes personalizadas, el diseño responsive y las variantes de modo oscuro.
+
+## nota
+Este reto me permitió comprender la importancia de escribir código más limpio y reutilizable. Aprendí que @apply puede ayudar a reducir la repetición de clases en elementos frecuentes, como los botones, sin necesidad de convertir toda la interfaz en componentes personalizados.
+
+También reforcé la importancia de medir el rendimiento de los recursos antes de recomendar una tecnología para un proyecto.
