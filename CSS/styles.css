@@ -67,6 +67,7 @@ body {
     font-family: var(--fuente-textos);
     font-weight: 400;
     line-height: 1.6;
+    padding-bottom: 5.5rem;
 }
 
 img {
@@ -1175,4 +1176,32 @@ legend {
     .tarjeta-ruta .card-img-top {
         height: 240px;
     }
+}
+
+/* =========================================
+   ETIQUETA DE NOVEDAD - BICICLETA ELÉCTRICA
+========================================= */
+
+.tarjeta-nueva {
+    position: relative;
+}
+
+.etiqueta-nuevo {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    padding: 6px 14px;
+    color: var(--color-azul);
+    background-color: var(--color-naranja);
+    border: 2px solid var(--color-blanco);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px rgba(20, 33, 61, 0.2);
+}
+/* Espacio inferior para el acceso flotante */
+body {
+    padding-bottom: 5.5rem;
 }

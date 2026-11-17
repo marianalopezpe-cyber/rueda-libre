@@ -310,3 +310,15 @@ Comprendí la importancia de organizar correctamente las rutas relativas cuando 
 
 ### nota
 Reforcé el uso de Grid para distribuir elementos en columnas y Flexbox para organizar el contenido dentro de las tarjetas. También comprendí cómo utilizar `flex-col`, `flex-1` y `mt-auto` para controlar la distribución vertical y mantener los botones alineados.
+
+# Mini Reto 12
+
+Realicé los ajustes finales de posicionamiento, agregué la etiqueta Nuevo a la bicicleta eléctrica y revisé el acceso flotante a WhatsApp. Organicé la hoja de estilos, verifiqué la navegación, la accesibilidad y los recursos del sitio.
+
+### nota
+
+Aprendizaje: comprendí la importancia de realizar pruebas de calidad antes de publicar un producto y de mantener organizado el código para facilitar su mantenimiento.
+
+Durante esta semana fortalecí mis conocimientos de HTML, CSS, JavaScript, Bootstrap y Tailwind. Aprendí a integrar diferentes tecnologías, resolver requerimientos con tiempo limitado y revisar la calidad de un sitio antes de su publicación.
+
+Repositorio: https://github.com/marianalopezpe-cyber/rueda-libre
