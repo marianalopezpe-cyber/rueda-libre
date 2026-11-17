@@ -274,3 +274,39 @@ Durante este reto reforcé el uso de formularios semánticos en HTML, la asociac
 
 -------
 
+# Mini Reto 10
+
+- Revisé la estructura de los archivos HTML y CSS del proyecto.
+- Verifiqué los enlaces de navegación entre la página principal, tarifas, reservas y Rueda Nocturna.
+- Revisé las rutas relativas para conectar correctamente los archivos ubicados en diferentes carpetas.
+- Identifiqué la ubicación incorrecta de la cuarta diapositiva del carrusel de Bootstrap.
+- Revisé las variables de color y tipografía de Bootstrap y Tailwind para mantener la identidad gráfica.
+- Corregí la sintaxis de algunas directivas de `input.css`.
+- Identifiqué la necesidad de conectar el logo de Rueda Nocturna con la página principal y el botón de reserva con el formulario de reservas.
+- Revisé la información de contacto para mantener consistencia entre los dos sitios.
+
+
+### Dificultades encontradas
+- Diferencias en las rutas relativas debido a la organización de carpetas.
+- Una diapositiva del carrusel estaba fuera del contenedor `.carousel-inner`.
+- Era necesario unificar los colores y las tipografías entre Bootstrap y Tailwind.
+- Se identificaron detalles de sintaxis en el archivo `input.css`.
+
+### nota
+Comprendí la importancia de organizar correctamente las rutas relativas cuando un proyecto tiene varias carpetas y tecnologías. También reforcé el uso de variables personalizadas para mantener una identidad visual consistente entre Bootstrap y Tailwind CSS.
+
+--------
+
+# Mini Reto 11
+
+### Actividades realizadas
+- Creé una sección con tres planes: Individual, Pareja y Grupo.
+- Organicé las tarjetas con CSS Grid, utilizando una columna en dispositivos móviles y tres columnas en pantallas grandes.
+- Apliqué Flexbox para distribuir verticalmente el contenido y mantener los botones al final de cada tarjeta.
+- Destaqué el plan Pareja con un borde de mayor grosor, un fondo diferente y la etiqueta “Más elegido”.
+- Organicé los beneficios de cada plan con Flexbox y separación uniforme.
+- Apliqué variantes `dark:` para conservar la legibilidad en modo oscuro.
+- Revisé el box model mediante DevTools, especialmente el ancho, el padding y los bordes de las tarjetas.
+
+### nota
+Reforcé el uso de Grid para distribuir elementos en columnas y Flexbox para organizar el contenido dentro de las tarjetas. También comprendí cómo utilizar `flex-col`, `flex-1` y `mt-auto` para controlar la distribución vertical y mantener los botones alineados.

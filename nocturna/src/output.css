@@ -237,6 +237,9 @@
   .visible {
     visibility: visible;
   }
+  .relative {
+    position: relative;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -255,8 +258,14 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
+  }
+  .mt-auto {
+    margin-top: auto;
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -269,6 +278,9 @@
   }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
@@ -299,6 +311,9 @@
   }
   .h-56 {
     height: calc(var(--spacing) * 56);
+  }
+  .h-full {
+    height: 100%;
   }
   .min-h-screen {
     min-height: 100vh;
@@ -333,6 +348,9 @@
   .max-w-xs {
     max-width: var(--container-xs);
   }
+  .flex-1 {
+    flex: 1;
+  }
   .shrink-0 {
     flex-shrink: 0;
   }
@@ -362,6 +380,9 @@
   }
   .items-start {
     align-items: flex-start;
+  }
+  .items-stretch {
+    align-items: stretch;
   }
   .justify-between {
     justify-content: space-between;
@@ -496,6 +517,15 @@
       border-color: color-mix(in oklab, var(--color-gris-asfalto) 30%, transparent);
     }
   }
+  .border-naranja-pedal {
+    border-color: var(--color-naranja-pedal);
+  }
+  .border-naranja-pedal\/30 {
+    border-color: color-mix(in srgb, #F39A2B 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-naranja-pedal) 30%, transparent);
+    }
+  }
   .border-verde-ruta {
     border-color: var(--color-verde-ruta);
   }
@@ -543,6 +573,12 @@
   }
   .bg-naranja-pedal {
     background-color: var(--color-naranja-pedal);
+  }
+  .bg-naranja-pedal\/10 {
+    background-color: color-mix(in srgb, #F39A2B 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-naranja-pedal) 10%, transparent);
+    }
   }
   .bg-transparent {
     background-color: transparent;
@@ -1018,6 +1054,14 @@
     .dark\:border-amarillo-farol {
       border-color: var(--color-amarillo-farol);
     }
+    .dark\:border-amarillo-farol\/30 {
+      border-color: color-mix(in srgb, #FFD166 30%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .dark\:border-amarillo-farol\/30 {
+        border-color: color-mix(in oklab, var(--color-amarillo-farol) 30%, transparent);
+      }
+    }
     .dark\:border-crema\/15 {
       border-color: color-mix(in srgb, #FAF6EF 15%, transparent);
     }
@@ -1036,6 +1080,14 @@
     }
     .dark\:bg-amarillo-farol {
       background-color: var(--color-amarillo-farol);
+    }
+    .dark\:bg-amarillo-farol\/10 {
+      background-color: color-mix(in srgb, #FFD166 10%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .dark\:bg-amarillo-farol\/10 {
+        background-color: color-mix(in oklab, var(--color-amarillo-farol) 10%, transparent);
+      }
     }
     .dark\:bg-amarillo-farol\/15 {
       background-color: color-mix(in srgb, #FFD166 15%, transparent);
